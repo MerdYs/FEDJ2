@@ -1,0 +1,13 @@
+<svg width="27" height="22" viewBox="0 0 27 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Navigatie-(desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="1.0---Home---Hero-A-(Desktop)-" transform="translate(-210.000000, -1066.000000)" stroke="#282828" fill="none">
+                                                <g id="Group-4" transform="translate(211.000000, 1067.000000)" stroke="#282828" fill="none">
+                                                    <polygon id="Path-8" points="0 4 6 4 6 20 0 20" stroke="#282828" fill="none"></polygon>
+                                                    <polygon id="Path-9" points="6 20 20 20 20 4 6 4" stroke="#282828" fill="none"></polygon>
+                                                    <polygon id="Path-10" points="20 18 25 18 25 20 20 20" stroke="#282828" fill="none"></polygon>
+                                                    <path d="M20,8 L22,8 L22,5.18846852 C21.8114076,4.52762889 21.144741,4.13147272 20,4 C20,4 20,5.33333333 20,8 Z" id="Path-11" stroke="#282828" fill="none"></path>
+                                                    <path d="M20,4 C20,3.26521936 20,2.89782904 20,2.89782904 C19.8751724,2.38717203 18.5071584,0.0245376798 16.7941439,0.0245376798 C16.7941439,0.0245376798 6,-0.486563518 6,3.15646986 C6,3.15646986 6,3.43764657 6,4 L20,4 Z" id="Path-12" stroke="#282828" fill="none"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>

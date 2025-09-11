@@ -58,6 +58,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
+  narrator notities
+
+  Ik heb aan het begin moeite gehad met het opstarten en testen met de shortcuts, uiteindelijk na het aan de praat te krijgen begon het met de TTS (Text to Speech) helemaal boven aan de pagina werkt het goed, hij omcirkelt het woord wat het momenteel aan het oplezen is en herhaalt dat nog een keer, hij herhaalt meerdere woorden na. Vervolgens toen hij bij de navbar aankwam leest hij eerst alles voor wat er in de navbar zit vervolgens herhaalt het weer het omcirkelde woord na het herhalen heeft hij het ook over bewerken waarna hij de link hard op aan het lezen is. Als de narrator lager naar de pagina gaat dan kun je niet meer zien wat hij omcirkelt maar hij blijft wel verder gaan (althans op de Apple site), als het de beurt is van een afbeelding/GIF dan beschrijft het wel wat er op de afbeelding/GIF wordt weergeven.
 </details>
 
 
@@ -68,13 +71,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/schetshome.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/dynamisch1.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/dynamisch2.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -90,6 +93,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Het plaatsen van de 2 navs en de footer vond ik lastig. Het plaatsen van de svg's is ook best wel vermoeiend. Ik moet nog goed kijken naar de fonts.
+
+  <img src="readme-images/navpagina.png" width="375px" alt="nav">
+  <img src="readme-images/footerpagina.png" width="375px" alt="footer">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
