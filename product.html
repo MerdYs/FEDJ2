@@ -73,51 +73,85 @@
 	</nav>
 </header>
 <main>
-    <section class="product-hero">
-        <a href="index.html" class="breadcrumbs">&lt; Terug naar alle machines</a>
-		<ul>
-			<li>
-				<img src="/images/Citiz_Black_front.png.webp" alt="citizfront">
-			</li>
-			<li>
-				<img src="/images/Citiz_Black_front.png.webp" alt="citizfront">
-			</li>
-			<li>
-				<img src="/images/Citiz_Black_front.png.webp" alt="citizfront">
-			</li>
-			<li>
-				<img src="/images/Citiz_Black_front.png.webp" alt="citizfront">
-			</li>
-			<li>
-				<img src="/images/Citiz_Black_front.png.webp" alt="citizfront">
-			</li>
-		</ul>
-		<p class="label">Nieuwe klanten aanbieding</p>
-		<h1>CITIZ</h1>
-		<p class="prijs">€ 179</p>
-		<p>*Verschillende prijsopties beschikbaar</p>
-		<p>Citiz combineert technologie met retro-moderne vormgeving</p>
-		<button>BEKIJK ALLE AANBIEDINGEN</button>
-		<ul class="kleuren">
-			<li><img src="/images/color_black_0.png.webp" alt="kleurzwart"></li>
-			<li><img src="/images/color_silver_0.png.webp" alt="kleurzilver"></li>
-			<li><img src="/images/color_red_0.png.webp" alt="kleurrood"></li>
-			<li><img src="/images/color_white.png.webp" alt="kleurwit"></li>
-		</ul>
-		<ul class="beschrijving">
-			<li><img src="/images/svg2/svgexport-29.svg" alt="beschrijving1">Iconisch en compact design</li>
-			<li><img src="/images/svg2/svgexport-29.svg" alt="beschrijving2">Snel opwarmingssysteem</li>
-			<li><img src="/images/svg2/svgexport-29.svg" alt="beschrijving3">30% korting op je machine in combinatie met 150 koffies voor nieuwe klanten</li>
-		</ul>
-		<p><img src="/images/svg2/svgexport-30.svg" alt="augmentedreality">Bekijk in jouw keuken</p>
-		<ul class="section-menu">
-				<li>Koffiestijlen<img src="/images/svg2/svgexport-31.svg" alt="pijltjebeneden"></li>
-				<li>Productinformatie<img src="/images/svg2/svgexport-31.svg" alt="pijltjebeneden"></li>
-				<li>Specificaties<img src="/images/svg2/svgexport-31.svg" alt="pijltjebeneden"></li>
-				<li>Accessoires<img src="/images/svg2/svgexport-31.svg" alt="pijltjebeneden"></li>
-		</ul>
-		<p class="korting"><img src="/images/korting.png" alt="korting">De Nieuwe klanten aanbieding is geldig tot 28/09/2025. <a href="#" class="voorwaarden">Zie voorwaarden</a></p>
+	<section class="breadcrumbs">
+		<a href="#">&lt; Terug naar alle machines</a>
+	</section>
+<section class="product-hero">
+
+  <!-- Two-column container -->
+  <section class="carousel-overlay" aria-label="Citiz product hero">
+    <!-- LEFT: GALLERY -->
+    <section class="gallery" aria-label="Afbeeldingencarrousel">
+      <button class="nav prev" aria-label="Vorige">&#10094;</button>
+
+      <!-- FIXED VIEWPORT (no div; using <figure>) -->
+      <figure class="viewport">
+        <ul class="slides">
+          <li><img src="/images/Citiz_Black_front.png.webp"            alt="Citiz vooraanzicht"></li>
+          <li><img src="/images/Citiz_Black_Quarter.png.webp"          alt="Citiz schuin vooraan"></li>
+          <li><img src="/images/Citiz_Black_side.png.webp"             alt="Citiz zijaanzicht"></li>
+          <li><img src="/images/nes_prospect_machines_citiz_black_top.png.webp" alt="Citiz bovenaanzicht"></li>
+          <li><img src="/images/Citiz_black_lifestyle.png.webp"        alt="Citiz in keuken setting"></li>
+        </ul>
+      </figure>
+
+      <button class="nav next" aria-label="Volgende">&#10095;</button>
+
+      <!-- Dots (no <div>) -->
+      <ul class="dots" aria-label="Carrousel paginering">
+        <li class="active" aria-label="Dia 1"></li>
+        <li aria-label="Dia 2"></li>
+        <li aria-label="Dia 3"></li>
+        <li aria-label="Dia 4"></li>
+        <li aria-label="Dia 5"></li>
+      </ul>
     </section>
+
+    <!-- RIGHT: PRODUCT CARD -->
+    <aside class="product-card" aria-labelledby="citiz-title">
+      <p class="badge">Nieuwe klanten aanbieding</p>
+      <h1 id="citiz-title">CITIZ</h1>
+      <p class="price">€ 179</p>
+      <p class="meta">*Verschillende prijsopties beschikbaar</p>
+      <p class="intro">Citiz combineert technologie met retro-moderne vormgeving</p>
+
+      <button class="cta" type="button">BEKIJK ALLE AANBIEDINGEN</button>
+
+      <ul class="colors" aria-label="Kleuren">
+        <li><img src="/images/color_black_0.png.webp"  alt="Zwart"></li>
+        <li><img src="/images/color_silver_0.png.webp" alt="Zilver"></li>
+        <li><img src="/images/color_red_0.png.webp"    alt="Rood"></li>
+        <li><img src="/images/color_white.png.webp"    alt="Wit"></li>
+      </ul>
+
+      <ul class="bullets">
+        <li>Iconisch en compact design</li>
+        <li>Snel opwarmingssysteem</li>
+        <li>30% korting op je machine in combinatie met 150 koffies voor nieuwe klanten</li>
+      </ul>
+
+    </aside>
+	<p class="ar"><img src="/images/svg2/svgexport-30.svg" alt="augmentedreality"/> Bekijk in jouw keuken</p>
+  </section>
+
+  <!-- tabs under the hero -->
+  <nav class="tabbar" aria-label="secties">
+    <ul>
+      <li>Koffiestijlen</li>
+      <li>Productinformatie</li>
+      <li>Specificaties</li>
+      <li>Accessoires</li>
+    </ul>
+  </nav>
+  <section class="korting">
+	  <!-- promo bar -->
+	  <p class="promo">
+		  <img src="/images/korting.png" alt="" />
+		  De Nieuwe klanten aanbieding is geldig tot 28/09/2025.
+		  <a href="#" class="voorwaarden">Zie voorwaarden</a>
+	  </p>
+  </section>
+</section>
 	<section class="help">
   			<ul class="help-cards">
     			<li>
