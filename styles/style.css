@@ -846,11 +846,12 @@ footer {
   background: linear-gradient(160deg, #f5f1ea 0%, #eae5dd 100%);
   padding: 40px 0 60px;
 }
+
 .carousel-overlay {
   display: grid;
   grid-template-columns: minmax(0, 700px) 420px;
   align-items: center;
-  column-gap: 40px;
+  gap: 40px;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
@@ -861,8 +862,6 @@ footer {
 .gallery {
   position: relative;
   text-align: center;
-  max-width: 700px;             
-  margin: 0 auto;
 }
 
 .viewport {
@@ -871,26 +870,96 @@ footer {
 
 .slides {
   display: flex;
-  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  gap: 1rem;
   margin: 0;
   padding: 0;
-  transition: transform 0.4s ease;
+  list-style: none;
+
+  scrollbar-width: none; /* verberg scrollbar */
+  scroll-marker-group: after; /* <— DIT activeert dots */
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
 }
 
 .slides li {
   flex: 0 0 100%;
+  scroll-snap-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
 }
 
+
 .slides img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
   object-fit: contain;
 }
 
-.nav {
+/* prev / next knoppen */
+.slides::scroll-button(*) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 3em;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,.15);
+}
+
+.slides::scroll-button(left) {
+  content: '←' / 'Vorige';
+  left: 1.5rem;
+}
+
+.slides::scroll-button(right) {
+  content: '→' / 'Volgende';
+  right: 1.5rem;
+}
+
+.slides::scroll-button(*):disabled {
+  opacity: 0.5;
+}
+
+/* bolletjes */
+.slides::scroll-marker-group {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: 1.5rem;
+  height: 1rem;
+}
+
+.slides li::scroll-marker {
+  content: '' / 'naar' attr(data-label);
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ccc;
+  transition: background .3s;
+  cursor: pointer;
+}
+
+.slides li::scroll-marker:target-current {
+  background: #333;
+}
+
+.gallery .nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -902,145 +971,142 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   font-size: 20px;
+  z-index: 2;
 }
 
-.nav.prev { left: -25px; }
-.nav.next { right: -25px; }
-
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  list-style: none;
-  margin: 16px 0 0;
-  padding: 0;
-}
-
-.dots li {
-  width: 6px;
-  height: 6px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dots li.active {
-  background: #333;
-}
+.gallery .nav.prev { left: 0.5rem; }
+.gallery .nav.next { right: 0.5rem; }
 
 .product-card {
-  display: block;
   background: #fff;
   border-radius: 12px;
-  padding: 35px 34px 40px;
+  padding: 2rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  align-self: start;
+  width: 100%;
   max-width: 420px;
 }
 
 .product-card .badge {
-  display: inline-block;
+  grid-area: badge;
   background: #b58b53;
   color: #fff;
-  font-size: 11px;
-  padding: 4px 8px;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 4px;
-  margin-bottom: 14px;
+  justify-self: start;
 }
 
 .product-card h1 {
-  font-size: 28px;
-  margin: 0 0 4px;
-}
-
-.price {
-  color: #007a4d;
-  font-size: 22px;
+  grid-area: title;
   margin: 0;
+  font-size: 1.8rem;
+}
+
+.product-card .price {
+  grid-area: price;
+  margin: 0;
+  color: #007a4d;
+  font-size: 1.5rem;
   font-weight: bold;
+  justify-self: end;
 }
 
-.meta {
-  font-size: 12px;
-  color: #666;
-  margin: 2px 0 10px;
+.product-card .meta {
+  grid-area: meta;
+  font-size: 0.85rem;
+  color: #777;
+  margin: 0;
 }
 
-.intro {
-  margin: 0 0 20px;
-  font-size: 15px;
+.product-card .intro {
+  grid-area: intro;
+  margin: 0.5rem 0 1rem;
 }
 
-.cta {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  margin: 14px 0 22px;
+.product-card .cta {
+  grid-area: cta;
   background: #007a4d;
   color: #fff;
-  text-align: center;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
+  padding: 0.9rem;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.95rem;
+  cursor: pointer;
 }
 
-
-.colors {
+.product-card .colors {
+  grid-area: colors;
   display: flex;
-  gap: 14px;
+  gap: 0.5rem;
   list-style: none;
-  margin: 0 0 22px;
+  margin: 0.5rem 0 0;
   padding: 0;
 }
 
-.colors img {
-  width: 30px;
-  height: 30px;
+.product-card .colors img {
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   border: 1px solid #ccc;
   cursor: pointer;
 }
 
-.bullets {
+.product-card .bullets {
+  grid-area: bullets;
   list-style: none;
+  margin: 1rem 0 0;
   padding: 0;
-  margin: 0;
-  font-size: 14px;
+  font-size: 0.95rem;
 }
 
-.bullets li {
-  margin-bottom: 8px;
+.product-card .bullets li {
+  margin-bottom: 0.4rem;
   padding-left: 20px;
   position: relative;
 }
 
-.bullets li::before {
+.product-card .bullets li::before {
   content: "✓";
+  color: #005c3a;
   position: absolute;
   left: 0;
-  color: #007a4d;
 }
 
+
+/* --- AR sectie onder de kaart --- */
+.product-info {
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+}
+
+
 .ar {
-  margin-top: 16px;
-  font-size: 14px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+
+  font-size: 0.95rem;
+  color: #333;
+
+  border-bottom: 1px solid #ddd;
+  padding-top: 1rem;
+  width: 100%;
+  max-width: 420px;
 }
 
 .ar img {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 
 .tabbar {
   max-width: 1280px;
   margin: 70px auto 0;
   padding: 0 40px;
+  text-decoration: none;
 }
 
 .tabbar ul {
@@ -1052,6 +1118,7 @@ footer {
   border: 1px solid #ddd;
   border-radius: 6px;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .tabbar li {
@@ -1061,10 +1128,16 @@ footer {
   cursor: pointer;
   background: #fff;
   border-right: 1px solid #ddd;
+  text-decoration: none;
 }
 
 .tabbar li:last-child {
   border-right: none;
+}
+
+.tabbar a{
+  text-decoration: none;
+  color: #333;
 }
 
 .korting {
@@ -1073,14 +1146,14 @@ footer {
 }
 
 .promo {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 15px 40px;
   color: #fff;
   font-size: 14px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
 }
 
 .promo img {
