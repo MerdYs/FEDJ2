@@ -25,6 +25,10 @@
 
 /* jouw code */
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
     font-family: Arial, sans-serif;
 }
