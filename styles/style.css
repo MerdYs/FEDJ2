@@ -844,7 +844,8 @@ footer {
 
 .product-hero {
   background: linear-gradient(160deg, #f5f1ea 0%, #eae5dd 100%);
-  padding: 40px 0 60px;
+  background-image: url(/images/light_texture_machine_nespresso_0.png);
+  padding: 40px 0 0;
 }
 
 .carousel-overlay {
@@ -1168,10 +1169,11 @@ footer {
 }
 
 .cups {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 100px auto;
-  padding: 0 40px;
+  padding: 3rem 4rem 2rem;
   text-align: center;
+  background-color: lightgray;
 }
 
 .cups h2 {
@@ -1197,7 +1199,7 @@ footer {
 
 .cups li img {
   display: block;
-  width: 90px;
+  width: 10rem;
   height: auto;
   margin: 0 auto 15px;
 }
@@ -1218,27 +1220,37 @@ footer {
 }
 
 .specificaties {
-  max-width: 1280px;
-  margin: 100px auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  max-width: 100%;
+  margin: 100px 0;
+  padding: 0;
+}
+
+.specificaties-content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 40px;
 }
 
 .specificaties h2 {
-  text-align: center;
+  text-align: left;
   font-size: 26px;
   letter-spacing: 1px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #1a1a1a;
   font-weight: 400;
 }
 
 .specificaties-lijst {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 35px 120px;
+  grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+  gap: 3rem 20rem;
   list-style: none;
   padding: 0;
-  margin: 0 0 40px;
+  margin: 0;
 }
 
 .specificaties-lijst li {
@@ -1267,6 +1279,13 @@ footer {
   color: #555;
 }
 
+.specificaties-img {
+  max-width: 600px;
+  width: 100%;
+  justify-self: end;
+  margin-right: 0;
+}
+
 .specificaties a {
   display: inline-block;
   margin-top: 20px;
@@ -1274,6 +1293,7 @@ footer {
   color: #6b4a26;
   font-size: 14px;
   font-weight: 500;
+  margin-top: 5rem;
 }
 
 .retro {
@@ -1283,24 +1303,29 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 60px;
+  gap: 130px;
 }
 
-.retro img:first-of-type {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+.retro-images {
+  position: relative;
+}
+
+.retro-images .bg {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+.retro-images .front {
+  position: absolute;
+  top: 80px;
+  left: 60px;
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: block;
 }
 
-.retro img:nth-of-type(2) {
-  display: none;
-}
-
-.retro h2 {
+.retro-text h2 {
   font-size: 26px;
   margin-bottom: 24px;
   color: #1a1a1a;
@@ -1308,9 +1333,120 @@ footer {
   font-weight: 400;
 }
 
-.retro p {
+.retro-text p {
   font-size: 15px;
   line-height: 1.8;
   color: #333;
   max-width: 560px;
+}
+
+.nespresso-accessoires {
+  max-width: 1280px;
+  margin: 120px auto;
+  padding: 0 40px;
+  text-align: center;
+  position: relative;
+}
+
+.nespresso-accessoires h2 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+  justify-self: start;
+}
+
+.nespresso-accessoires ul {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* meer ruimte tussen de kaarten */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2; /* voor de textuur */
+}
+
+.nespresso-accessoires ul li {
+  flex: 0 1 550px; /* bredere kaarten */
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.nespresso-accessoires ul li img {
+  max-width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.nespresso-accessoires ul li h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 12px 0;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.nespresso-accessoires ul li p {
+  font-size: 14px;
+  color: #333;
+  margin: 8px 0;
+}
+
+.nespresso-accessoires ul li a{
+  display: inline-block;
+  margin: 10px 0;
+  color: #6a4b1a;
+  font-weight: 600;
+
+}
+
+.nespresso-accessoires ul li .geld {
+  font-size: 16px;
+  font-weight: 600;
+  color: #006633;
+  margin: 12px 0;
+}
+
+.nespresso-accessoires ul li button {
+  background: #006633;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nespresso-accessoires > img {
+  position: absolute;
+  top: -40px;   /* omhoog zetten */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px; /* iets groter zodat hij uitsteekt */
+  z-index: 1;
+  opacity: 0.15; /* subtieler maken */
+  pointer-events: none;
+}
+
+.nespresso-accessoires > p {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #333;
+}
+
+.nespresso-accessoires > p img {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.nespresso-accessoires > p a {
+  display: inline-block;
+  margin: 10px 0;
+  color: #6a4b1a;
+  font-weight: 600;
 }
