@@ -1068,7 +1068,7 @@ footer {
 }
 
 .product-card .bullets li::before {
-  content: "✓";
+  content: url(/images/svg2/svgexport-35.svg);
   color: #005c3a;
   position: absolute;
   left: 0;
@@ -1355,6 +1355,7 @@ footer {
   margin-bottom: 60px;
   color: #1a1a1a;
   justify-self: start;
+  margin-left: 20px;
 }
 
 .nespresso-accessoires ul {
@@ -1449,4 +1450,164 @@ footer {
   margin: 10px 0;
   color: #6a4b1a;
   font-weight: 600;
+}
+
+.veelgestelde {
+  max-width: 900px;
+  margin: 120px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.veelgestelde h2 {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+.veelgestelde details {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.veelgestelde summary {
+  font-weight: 600;
+  font-size: 15px;
+  color: #1a1a1a;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.veelgestelde summary::-webkit-details-marker {
+  display: none; /* standaard driehoekje weghalen */
+}
+
+.veelgestelde details[open] summary {
+  margin-bottom: 15px;
+}
+
+.veelgestelde details p,
+.veelgestelde details ol {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.veelgestelde ol {
+  list-style: decimal;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.veelgestelde li {
+  margin-bottom: 12px;
+}
+
+/* custom pijltje rechts */
+.veelgestelde summary::after {
+  content: url(/images/svg2/svgexport-31.svg); /* pijltje naar beneden */
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.veelgestelde details[open] summary::after {
+  transform: rotate(-180deg); /* omhoog draaien als open */
+}
+
+.reserve {
+  max-width: 1280px;
+  margin: 120px auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.reserve h2 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+  justify-self: start;
+  margin-left: 0;
+}
+
+.reserve ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.reserve li {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.reserve li:hover {
+  transform: translateY(-5px);
+}
+
+.reserve img {
+  max-height: 120px;
+  margin-bottom: 20px;
+}
+
+.reserve h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.reserve a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6a4a2f;
+  text-decoration: none;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #6a4a2f;
+  transition: color 0.2s ease;
+}
+
+.reserve a:hover {
+  color: #333;
+}
+
+.reserve .geld {
+  font-size: 16px;
+  font-weight: 600;
+  color: #006241;
+  margin-bottom: 20px;
+}
+
+.reserve button {
+  background: #006241;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.reserve button:hover {
+  background: #004c32;
 }
