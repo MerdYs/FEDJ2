@@ -60,14 +60,18 @@ html {
 
 h2, h3{
   font-family: light; /* 300 */
+  font-size: 40px;
+  font-weight: 300;
 }
 
 header, h1, p{
   font-family: regular; /* 400 */
+  font-weight: 400;
 }
 
 a, h4{
   font-family: medium; /* 500 */
+  font-weight: 500;
 }
 
 
@@ -156,7 +160,6 @@ header nav:first-of-type .logo {
     justify-content: center;
     padding-left: 60px;
     color: white;
-    gap: 15px;
 }
 
 .hero video {
@@ -176,6 +179,8 @@ header nav:first-of-type .logo {
 
 .hero p {
     font-size: 16px;
+    margin: 0;
+    margin-top: 0;
 }
 
 .hero a {
@@ -197,10 +202,11 @@ header nav:first-of-type .logo {
 
 .producten ul {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
   padding: 0;
   margin: 2em;
+  margin-top: 4rem;
 }
 
 .producten li {
@@ -228,6 +234,11 @@ header nav:first-of-type .logo {
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
+.promoties h2, p{
+  margin-left: 9rem;
+  padding: 0 0 1rem;
+}
+
 .promos {
   display: flex;
   gap: 1.5rem;
@@ -236,12 +247,13 @@ header nav:first-of-type .logo {
   margin: 2rem 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  margin-left: 9rem;
 }
 
 .promos li {
   position: relative;
-  flex: 0 0 300px;
-  height: 420px;
+  flex: 0 0 22rem;
+  height: 31rem;
   border-radius: 1rem;
   overflow: hidden;
   scroll-snap-align: start;
@@ -770,15 +782,15 @@ footer {
 
 .footer-mid-1 {
   display: flex;
-  flex-direction: column; /* elke "rij" onder elkaar */
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem; /* ruimte tussen de rijen */
+  gap: 1.5rem;
 }
 
 .footer-mid-1 .item {
   display: flex;
-  align-items: center; /* tekst verticaal gecentreerd naast de afbeelding */
-  gap: 0.5rem; /* ruimte tussen tekst en afbeelding */
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .footer-mid-2 {
@@ -916,8 +928,8 @@ footer {
   padding: 0;
   list-style: none;
 
-  scrollbar-width: none; /* verberg scrollbar */
-  scroll-marker-group: after; /* <— DIT activeert dots */
+  scrollbar-width: none;
+  scroll-marker-group: after;
 }
 
 .slides::-webkit-scrollbar {
@@ -973,7 +985,7 @@ footer {
   opacity: 0.5;
 }
 
-/* bolletjes */
+/* dots */
 .slides::scroll-marker-group {
   display: flex;
   justify-content: center;
@@ -1117,7 +1129,6 @@ footer {
   justify-items: center;
   gap: 1.5rem;
 }
-
 
 .ar {
   display: flex;
