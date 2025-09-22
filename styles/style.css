@@ -290,6 +290,11 @@ header nav:first-of-type .logo {
   line-height: 1.4;
 }
 
+.samra h3{
+  margin-left: 22rem;
+  margin-bottom: 0;
+}
+
 .samra-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -298,6 +303,7 @@ header nav:first-of-type .logo {
   list-style: none;
   padding: 0;
   margin: 2rem 0;
+  margin-top: 0;
 }
 
 .samra-container li {
@@ -307,6 +313,17 @@ header nav:first-of-type .logo {
 
 .samra-container li.large {
   grid-row: 1 / span 2;
+  width: 48rem;
+  height: 48rem;
+  margin-left: 22rem;
+}
+
+.samra-container li.klein {
+  width: 23.5rem;
+  height: 23.5rem;
+  object-fit: cover;
+  display: block;
+  margin-right: 30rem;
 }
 
 .samra-container img {
@@ -316,12 +333,16 @@ header nav:first-of-type .logo {
   display: block;
 }
 
+.bestsellers h2{
+  margin-left: 9rem;
+}
+
 .product-filters {
   display: flex;
   gap: 1rem;
   list-style: none;
   padding: 0;
-  margin: 1rem 0 2rem;
+  margin: 1rem 9rem 2rem;
 }
 
 .product-filters button {
@@ -350,19 +371,19 @@ header nav:first-of-type .logo {
   gap: 1.5rem;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 9rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 }
 
 .product-cards li {
-  flex: 0 0 200px;
+  /* flex: 0 0 200px; */
   background: #fff;
   border-radius: 1rem;
   border: 1px solid #eee;
-  padding: 1rem;
+  /* padding: 1rem;
   scroll-snap-align: start;
-  transition: transform 0.2s;
+  transition: transform 0.2s; */
 }
 
 .product-cards li:hover {
@@ -388,11 +409,17 @@ header nav:first-of-type .logo {
 }
 
 .product-cards p img {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
+  margin-top: 1rem;
 }
 
 .product-cards h4 {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.product-cards p{
   font-size: 1rem;
   margin: 0.3rem 0;
 }
