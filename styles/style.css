@@ -234,7 +234,7 @@ header nav:first-of-type .logo {
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-.promoties h2, p{
+.promoties h2, .promoties p{
   margin-left: 9rem;
   padding: 0 0 1rem;
 }
@@ -371,19 +371,19 @@ header nav:first-of-type .logo {
   gap: 1.5rem;
   list-style: none;
   padding: 0;
-  margin: 0 9rem;
+  margin: 0 10rem 1rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 }
 
 .product-cards li {
-  /* flex: 0 0 200px; */
+  flex: 0 0 200px;
   background: #fff;
   border-radius: 1rem;
   border: 1px solid #eee;
-  /* padding: 1rem;
+  padding: 1rem;
   scroll-snap-align: start;
-  transition: transform 0.2s; */
+  transition: transform 0.2s;
 }
 
 .product-cards li:hover {
@@ -647,7 +647,7 @@ header nav:first-of-type .logo {
   margin-bottom: 0.8rem;
 }
 
-.help-cards p {
+.help-cards li p {
   color: #666;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -1435,16 +1435,16 @@ footer {
 .nespresso-accessoires ul {
   display: flex;
   justify-content: center;
-  gap: 60px; /* meer ruimte tussen de kaarten */
+  gap: 60px;
   list-style: none;
   padding: 0;
   margin: 0;
   position: relative;
-  z-index: 2; /* voor de textuur */
+  z-index: 2;
 }
 
 .nespresso-accessoires ul li {
-  flex: 0 1 550px; /* bredere kaarten */
+  flex: 0 1 550px;
   background: #fff;
   padding: 40px 30px;
   border-radius: 6px;
@@ -1499,12 +1499,12 @@ footer {
 
 .nespresso-accessoires > img {
   position: absolute;
-  top: -40px;   /* omhoog zetten */
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
-  width: 900px; /* iets groter zodat hij uitsteekt */
+  width: 900px;
   z-index: 1;
-  opacity: 0.15; /* subtieler maken */
+  opacity: 0.15;
   pointer-events: none;
 }
 
@@ -1559,7 +1559,7 @@ footer {
 }
 
 .veelgestelde summary::-webkit-details-marker {
-  display: none; /* standaard driehoekje weghalen */
+  display: none;
 }
 
 .veelgestelde details[open] summary {
@@ -1585,15 +1585,14 @@ footer {
   margin-bottom: 12px;
 }
 
-/* custom pijltje rechts */
 .veelgestelde summary::after {
-  content: url(/images/svg2/svgexport-31.svg); /* pijltje naar beneden */
+  content: url(/images/svg2/svgexport-31.svg);
   font-size: 14px;
   transition: transform 0.2s ease;
 }
 
 .veelgestelde details[open] summary::after {
-  transform: rotate(-180deg); /* omhoog draaien als open */
+  transform: rotate(-180deg);
 }
 
 .reserve {
