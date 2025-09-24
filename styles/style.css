@@ -66,32 +66,32 @@ img {
 /* Fonts */
 @font-face {
   font-family: 'regular';
-  src: url('/styles/fonts/NespressoLucas-Regular.woff2') format('woff2');
+  src: url('./styles/fonts/NespressoLucas-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'bold';
-  src: url('/styles/fonts/NespressoLucas-Bold.woff2') format('woff2');
+  src: url('./styles/fonts/NespressoLucas-Bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'light';
-  src: url('/styles/fonts/NespressoLucas-Light.woff2') format('woff2');
+  src: url('./styles/fonts/NespressoLucas-Light.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'medium';
-  src: url('/styles/fonts/NespressoLucas-Med.woff2') format('woff2');
+  src: url('./styles/fonts/NespressoLucas-Med.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'semi';
-  src: url('/styles/fonts/NespressoLucas-SemiBd.woff2') format('woff2');
+  src: url('./styles/fonts/NespressoLucas-SemiBd.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'extra';
-  src: url('/styles/fonts/NespressoLucas-XtraBd.woff2') format('woff2');
+  src: url('./styles/fonts/NespressoLucas-XtraBd.woff2') format('woff2');
 }
 
 h2, h3 {
