@@ -4,22 +4,25 @@
   <meta charset="UTF-8">
   <meta name="author" content="jouw naam">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nespresso Citiz koffiemachine | Nespresso</title>
+  <title>Koffie- & Espresso capsules en machines | Nespresso</title>
   <link href="styles/style.css" rel="stylesheet">
+  <link href="styles/prod.css" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/images/favicon.ico">
   <script defer src="scripts/script.js"></script>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <nav>
-      <img src="/images/Nespresso_logo.png" alt="nespressologo">
+      <img src="/images/Nespresso_logo.png" alt="Nespresso logo">
       <ul>
         <li>
-          <img src="/images/24_symbols_action_search.svg" alt="zoekicoon">
+          <img src="/images/24_symbols_action_search.svg" alt="zoek icoon">
           <p>Zoeken</p>
         </li>
-        <li>
-          <img src="/images/24_user_account.svg" alt="accounticoon">
+        <li class="account">
+          <img src="/images/24_user_account.svg" alt="account icoon">
+          <span class="status-indicator">x</span>
           <p>Account</p>
         </li>
         <li>
@@ -30,105 +33,211 @@
     </nav>
 
     <!-- Nav Menu -->
-    <nav>
+<nav>
+  <ul>
+    <li>
+      <img src="./images/svg/svgexport-2.svg" alt="koffiemenu">
+      <p>Koffie</p>
       <ul>
-        <li><img src="/images/svg/svgexport-2.svg" alt="koffiemenu"><span>Koffie</span></li>
-        <li><img src="/images/svg/svgexport-6.svg" alt="machinemenu"><span>Machines</span></li>
-        <li><img src="/images/svg/svgexport-9.svg" alt="accessoiresmenu"><span>Accessoires</span></li>
-        <li><img src="/images/svg/svgexport-10.svg" alt="abonnementmenu"><span>Abonnement</span></li>
-        <li><img src="/images/svg/svgexport-11.svg" alt="servicemenu"><span>Service & Voordelen</span></li>
-        <li><img src="/images/svg/svgexport-12.svg" alt="boutiquemenu"><span>Vind een Boutique</span></li>
-        <li><img src="/images/svg/svgexport-13.svg" alt="duurzaamheidmenu"><span>Duurzaamheid & Recycling</span></li>
-        <li><img src="/images/svg/svgexport-14.svg" alt="contactmenu"><span>Contact & FAQ</span></li>
-        <li><img src="/images/svg/svgexport-15.svg" alt="professioneelmenu"><span>Professioneel</span></li>
+        <li><span><img src="./images/svg/svgexport-4.svg" alt="originele cups dropdown">Bestel Original koffiecups</span></li>
+        <li><span><img src="./images/svg/svgexport-5.svg" alt="vertuo cups dropdown">Bestel Vertuo koffiecups</span></li>
+        <li>Bestel zakelijke capsules&#x2197;</li>
+        <li>Vind jouw smaakmatch</li>
+        <li>Bestel je vorige order</li>
+        <li>Stel herhaalbestelling in</li>
+        <img src="./images/nes-menu-bg-coffee.png" alt="koffie achtergrond menu">
       </ul>
-    </nav>
+    </li>
+
+    <li>
+      <img src="./images/svg/svgexport-6.svg" alt="machine menu">
+      <p>Machines</p>
+      <ul>
+        <li><span><img src="./images/svg/svgexport-7.svg" alt="originele koffiemachines dropdown">Original koffiemachines</span></li>
+        <li><span><img src="./images/svg/svgexport-6.svg" alt="vertuo koffiemachines dropdown">Vertuo koffiemachines</span></li>
+        <li>Bestel zakelijke machines&#x2197;</li>
+        <li>Machine probleem oplossen</li>
+        <li>Machine onderhoud</li>
+        <img src="./images/nes-menu-bg-machine.png" alt="machine achtergrond menu">
+      </ul>
+    </li>
+
+    <li>
+      <img src="./images/svg/svgexport-9.svg" alt="accessoires menu">
+      <p>Accessoires</p>
+      <ul>
+        <li><span>Alle accessoires</span></li>
+        <li>Nespresso Tumbler</li>
+        <li>Recycling</li>
+        <li>Giftcard</li>
+        <li>Alles voor melkrecepten</li>
+        <img src="./images/nes-menu-bg-accessoires.png" alt="accessoires achtergrond menu">
+      </ul>
+    </li>
+
+    <li>
+      <img src="./images/svg/svgexport-10.svg" alt="abonnement menu">
+      <p>Abonnement</p>
+      <ul>
+        <li><span><img src="./images/svg/svgexport-6.svg" alt="abonnement machine menu dropdown">Nespresso Abonnement</span></li>
+        <li><span><img src="./images/svg/svgexport-5.svg" alt="abonnement vertuo menu dropdown">Meer over Nespresso abonnement</span></li>
+        <li>Beheer je Nespresso abonnement</li>
+        <li>Beheer je Nespresso Vanzelf</li>
+      </ul>
+    </li>
+
+    <li>
+      <img src="./images/svg/svgexport-11.svg" alt="service menu">
+      <p>Service & Voordelen</p>
+      <ul>
+        <li>Alle bezorg-en bestelservices</li>
+        <li>Nespresso & More: Extra voordelen</li>
+      </ul>
+    </li>
+
+    <li>
+      <img src="./images/svg/svgexport-12.svg" alt="boutique menu">
+      <p>Vind een Boutique</p>
+    </li>
+
+    <li>
+      <img src="./images/svg/svgexport-13.svg" alt="duurzaamheid menu">
+      <p>Duurzaamheid & Recycling</p>
+      <ul>
+        <li>Recyclezak bestellen</li>
+        <li>Recycling</li>
+        <li>Duurzaamheid & B-corp</li>
+        <li>Koffie inspiratie - Recepten en duurzaamheid</li>
+      </ul>
+    </li>
+
+    <li>
+      <img src="./images/svg/svgexport-14.svg" alt="contact menu">
+      <p>Contact & FAQ</p>
+    </li>
+
+    <li>
+      <img src="./images/svg/svgexport-15.svg" alt="professioneel menu">
+      <p>Professioneel&#x2197;</p>
+      <ul>
+        <li>Zakelijke capsules&#x2197;</li>
+        <li>Zakelijke machines&#x2197;</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
   </header>
 
   <main>
+    <!-- Breadcrumb -->
     <section>
-      <a href="#">&lt; Terug naar alle machines</a>
-    </section>
-
-    <section>
-      <section>
-        <!-- GALLERY -->
-        <section>
-          <ul>
-            <li><img src="/images/Citiz_Black_front.png.webp" alt="Citiz vooraanzicht"></li>
-            <li><img src="/images/Citiz_Black_Quarter.png.webp" alt="Citiz schuin vooraan"></li>
-            <li><img src="/images/Citiz_Black_side.png.webp" alt="Citiz zijaanzicht"></li>
-            <li><img src="/images/nes_prospect_machines_citiz_black_top.png.webp" alt="Citiz bovenaanzicht"></li>
-            <li><img src="/images/Citiz_black_lifestyle.png.webp" alt="Citiz in keuken setting"></li>
-            <li>
-              <iframe width="500" height="315" src="https://www.youtube.com/embed/a0IcyfwmCMk?si=aEtVep8v7EqLlKPg"
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </li>
-          </ul>
-        </section>
-
-        <!-- PRODUCT INFO -->
-        <section>
-          <aside>
-            <p>Nieuwe klanten aanbieding</p>
-            <h1>CITIZ</h1>
-            <p>€ 179</p>
-            <p>*Verschillende prijsopties beschikbaar</p>
-            <p>Citiz combineert technologie met retro-moderne vormgeving</p>
-            <button type="button">BEKIJK ALLE AANBIEDINGEN</button>
-
-            <ul>
-              <li><img src="/images/color_black_0.png.webp" alt="Zwart"></li>
-              <li><img src="/images/color_silver_0.png.webp" alt="Zilver"></li>
-              <li><img src="/images/color_red_0.png.webp" alt="Rood"></li>
-              <li><img src="/images/color_white.png.webp" alt="Wit"></li>
-            </ul>
-
-            <ul>
-              <li>Iconisch en compact design</li>
-              <li>Snel opwarmingssysteem</li>
-              <li>30% korting op je machine in combinatie met 150 koffies voor nieuwe klanten</li>
-            </ul>
-          </aside>
-
-          <p>
-            <img src="/images/svg2/svgexport-30.svg" alt="augmentedreality" />
-            Bekijk in jouw keuken
-          </p>
-        </section>
+  <a href="#">&lt; Terug naar alle machines</a>
       </section>
+  <!-- Hero layout: gallery + info -->
+  <section>
+    <!-- === GALLERY === -->
+<section>
+  <ul>
+    <li data-label="Citiz voor">
+      <img src="/images/Citiz_Black_front.png.webp" alt="Citiz vooraanzicht">
+    </li>
+    <li data-label="Citiz schuin">
+      <img src="/images/Citiz_Black_Quarter.png.webp" alt="Citiz schuin vooraan">
+    </li>
+    <li data-label="Citiz zij">
+      <img src="/images/Citiz_Black_side.png.webp" alt="Citiz zijaanzicht">
+    </li>
+    <li data-label="Citiz boven">
+      <img src="/images/nes_prospect_machines_citiz_black_top.png.webp" alt="Citiz bovenaanzicht">
+    </li>
+    <li data-label="Citiz in keuken">
+      <img src="/images/Citiz_black_lifestyle.png.webp" alt="Citiz in keuken setting">
+    </li>
+    <li data-label="Citiz video">
+      <iframe width="660" height="615"
+        src="https://www.youtube.com/embed/a0IcyfwmCMk?si=aEtVep8v7EqLlKPg"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </li>
+  </ul>
+</section>
 
-      <!-- TABBAR -->
-      <nav>
+
+
+    <!-- === PRODUCT INFO === -->
+    <section>
+      <aside>
+        <p>Nieuwe klanten aanbieding</p>
+        <h1>CITIZ</h1>
+        <p>€ 179</p>
+        <p>*Verschillende prijsopties beschikbaar</p>
+        <p>Citiz combineert technologie met retro-moderne vormgeving</p>
+        <button>BEKIJK ALLE AANBIEDINGEN</button>
+
+        <!-- Kleuren -->
         <ul>
-          <li><a href="#koffiestijlen">Koffiestijlen</a></li>
-          <li><a href="#">Productinformatie</a></li>
-          <li><a href="#">Specificaties</a></li>
-          <li><a href="#">Accessoires</a></li>
+          <li><img src="/images/color_black_0.png.webp" alt="Zwart"></li>
+          <li><img src="/images/color_silver_0.png.webp" alt="Zilver"></li>
+          <li><img src="/images/color_red_0.png.webp" alt="Rood"></li>
+          <li><img src="/images/color_white.png.webp" alt="Wit"></li>
         </ul>
-      </nav>
 
-      <!-- KORTING -->
-      <section>
-        <p>
-          <img src="/images/korting.png" alt="kortingtag" />
-          De Nieuwe klanten aanbieding is geldig tot 28/09/2025.
-          <a href="#">Zie voorwaarden</a>
-        </p>
-      </section>
+        <!-- Features -->
+        <ul>
+          <li>Iconisch en compact design</li>
+          <li>Snel opwarmingssysteem</li>
+          <li>30% korting op je machine in combinatie met 150 koffies voor nieuwe klanten</li>
+        </ul>
+      </aside>
+      
+      <!-- AR link -->
+      <a>
+        <img src="/images/svg2/svgexport-30.svg" alt="augmented reality"/>
+        Bekijk in jouw keuken
+      </a>
     </section>
+    
+    
+    <!-- === TABBAR === -->
+    <nav>
+      <ul>
+        <li><a href="#koffiestijlen">Koffiestijlen</a></li>
+        <li><a href="#">Productinformatie</a></li>
+        <li><a href="#">Specificaties</a></li>
+        <li><a href="#">Accessoires</a></li>
+      </ul>
+    </nav>  
+  </section>
+  <!-- === KORTING BANNER === -->
+    <section>
+      <p><img src="/images/korting.png" alt="kortingtag"/>De Nieuwe klanten aanbieding is geldig tot 28/09/2025.<a href="#">Zie voorwaarden</a></p>
+    </section>
+
 
     <!-- Help -->
-    <section>
-      <ul>
-        <li><img src="/images/svg2/svgexport-45.svg" alt="bezorging"><h4>Gratis bezorging</h4><p>Bestel en ontvang je machine de volgende dag</p></li>
-        <li><img src="/images/svg2/svgexport-46.svg" alt="machine"><h4>Machine ondersteuning</h4><p>Bekijk video's en instructies</p><a href="#">Bekijk video's</a></li>
-        <li><img src="/images/svg2/svgexport-47.svg" alt="capsule"><h4>Gratis proefpakket</h4><p>Je ontvangt een proefpakket zodat je onze koffie kunt uitproberen</p></li>
-      </ul>
-    </section>
+<section>
+  <ul>
+    <li>
+      <img src="/images/svg2/svgexport-45.svg" alt="bezorging">
+      <h4>Gratis bezorging</h4>
+      <p>Bestel en ontvang je machine de volgende dag</p>
+    </li>
+    <li>
+      <img src="/images/svg2/svgexport-46.svg" alt="machine">
+      <h4>Machine ondersteuning</h4>
+      <p>Bekijk video's en instructies over hoe je jouw machine kunt gebruiken</p>
+      <a href="#">Bekijk video's</a>
+    </li>
+    <li>
+      <img src="/images/svg2/svgexport-47.svg" alt="capsule">
+      <h4>Gratis proefpakket</h4>
+      <p>Je ontvangt een proefpakket zodat je onze koffie kunt uitproberen</p>
+    </li>
+  </ul>
+</section>
+
 
     <!-- Cups -->
     <section>
@@ -141,20 +250,20 @@
 
     <!-- Specificaties -->
     <section>
-      <section>
+      <article>
         <h2>SPECIFICATIES</h2>
         <ul>
           <li><img src="/images/svg2/svgexport-48.svg" alt=""><article><h3>Energieverbruiksklasse</h3><p>A+</p></article></li>
-          <li><img src="/images/svg2/svgexport-49.svg" alt=""><article><h3>Energiebesparende modus</h3><p>Auto-off na 2 min</p></article></li>
-          <li><img src="/images/svg2/svgexport-50.svg" alt=""><article><h3>Fast-heat-up time</h3><p>25 seconden</p></article></li>
-          <li><img src="/images/svg2/svgexport-51.svg" alt=""><article><h3>Inhoud waterreservoir</h3><p>1 Liter</p></article></li>
           <li><img src="/images/svg2/svgexport-52.svg" alt=""><article><h3>Capsule container capaciteit</h3><p>10 capsules</p></article></li>
+          <li><img src="/images/svg2/svgexport-49.svg" alt=""><article><h3>Energiebesparende modus</h3><p>Auto-off na 2 min</p></article></li>
           <li><img src="/images/svg2/svgexport-53.svg" alt=""><article><h3>Afmetingen (B x D x H)</h3><p>13 x 37.2 x 27.8 cm</p></article></li>
+          <li><img src="/images/svg2/svgexport-50.svg" alt=""><article><h3>Fast-heat-up time</h3><p>25 seconden</p></article></li>
           <li><img src="/images/svg2/svgexport-54.svg" alt=""><article><h3>Gewicht</h3><p>3.3 kg</p></article></li>
+          <li><img src="/images/svg2/svgexport-51.svg" alt=""><article><h3>Inhoud waterreservoir</h3><p>1 Liter</p></article></li>
           <li><img src="/images/svg2/svgexport-55.svg" alt=""><article><h3>Machinegarantie</h3><p>2 jaar</p></article></li>
         </ul>
         <a href="#">Download gebruikershandleiding in PDF</a>
-      </section>
+      </article>
       <img src="/images/citiz.png" alt="citizrechts">
     </section>
 
@@ -166,7 +275,13 @@
       </article>
       <article>
         <h2>RETRO-MODERN DESIGN</h2>
-        <p>Alle wegen leiden naar de Nespresso CitiZ koffiemachine... (beschrijving).</p>
+        <p>
+          Alle wegen leiden naar de Nespresso CitiZ koffiemachine met zijn krachtige vormgeving, geïnspireerd op de architectuur van een grote stad. Hij is stabiel, 
+          elegant en heeft een retro-moderne uitstraling. De CitiZ is gemakkelijk te bedienen, met twee programmeerbare knoppen voor espresso en lungo. 
+          De kophouder kun je inklappen voor grotere koffies of melkrecepten. De hogedrukpomp zorgt dat de smaken en aroma’s volledig tot hun recht komen, 
+          inclusief de kenmerkende Nespresso crema. Dankzij de energiebesparende functie schakelt de machine automatisch uit als je de hele dag weg bent. 
+          Kortom: een mooie mix van stijl en materialen.
+        </p>
       </article>
     </section>
 
@@ -204,19 +319,29 @@
       <details>
         <summary>Hoe onderhoud ik mijn machine?</summary>
         <ol>
-          <li>Ontkalk uw machine minstens 1x per jaar...</li>
-          <li>Werp de capsules uit na elk gebruik</li>
-          <li>Ververs het water regelmatig</li>
-          <li>Reinig het opvangbakje en lekbak</li>
-          <li>Laat water door de machine zonder capsule voor gebruik</li>
+          <li><p>Ontkalk uw machine ten minste eenmaal per jaar bij zacht water N.B.: als u hard water heeft, ontkalkt u tweemaal per jaar. (Als u niet weet welk type water u heeft, heeft u waarschijnlijk hard water. Dit laat over het algemeen witte sporen na in het waterreservoir)</p></li>
+          <li><p>Werp de capsules uit na elk gebruik</p></li>
+          <li><p>Ververs het water regelmatig</p></li>
+          <li><p>Leeg en reinig het capsule-opvangbakje en de lekbak regelmatig</p></li>
+          <li><p>Voordat u uw eerste kop koffie zet, drukt u op een willekeurige koffievolumeknop (bijv. de lungo- of espressoknop) en laat u water door de machine lopen zonder capsule. Hierdoor verwarmt u uw koffiekopje en reinigt u het extractiesysteem voor een nog lekkerder kopje koffie</p></li>
         </ol>
       </details>
       <details>
         <summary>Wat betekent 19 bar?</summary>
-        <p>Alle Nespresso machines hebben een pomp van 19 bar...</p>
+        <p>Alle Nespresso machines zijn uitgerust met een hogedrukpomp van 19 bar voor de kracht die nodig is om de capsule te doorboren en zo de 900 verschillende koffiearoma's vrij te laten komen. De vorm van de Nespresso capsule is speciaal ontworpen om ervoor te zorgen dat het water tijdens de extractie onder druk en gelijkmatig door de gemalen koffie stroomt. Ook de temperatuur en doorstroomtijd zijn essentieel om ervoor te zorgen dat elk kostbaar aroma vrijkomt.</p>
       </details>
-      <details><summary>Details</summary>Something small enough to escape casual notice.</details>
-      <details><summary>Details</summary>Something small enough to escape casual notice.</details>
+      <details>
+        <summary>Mijn machine heeft een slechte of geen koffiedoorstroming?</summary>
+        <p>Als er geen koffiedoorstroming is, controleert u het volgende: Het netsnoer zit niet klem tussen het waterreservoir en de machine. De machine staat aan (het lampje brandt). Als de koffie slecht doorstroomt, is het verstandig om uw machine te ontkalken.</p>
+      </details>
+      <details>
+        <summary>Wat betekenen de knipperende lampjes op mijn machine?</summary>
+        <ol>
+          <li><p>Als de lampjes regelmatig en snel knipperen, kan dat betekenen dat de machine in de ontkalkingsstand staat of dat het leegsysteem is ingeschakeld.</p></li>
+          <li><p>Als de lampjes langzaam en om en om knipperen (elke 2 seconden) betekent dit dat de machine in de energiebesparende modus staat (stand-by). Deze modus wordt geactiveerd als de machine 9 minuten niet gebruikt is. Voor het afsluiten van deze modus drukt u op een willekeurige knop (wijziging van knipperritme). De machine is klaar wanneer de knoppen niet meer knipperen.</p></li>
+          <li><p>Als het lampje onregelmatig knippert, belt u dan alstublieft onze klantenservice op 0800 022 23 20</p></li>
+        </ol>
+      </details>
     </section>
 
     <!-- Reserve -->
@@ -239,98 +364,130 @@
         </li>
       </ul>
     </section>
-  </main>
-
+</main>
   <!-- Footer -->
-  <footer>
-    <section>
-      <section>
-        <h3>Onze producten</h3>
-        <ul>
-          <li><a href="#">Original of Vertuo</a></li>
-          <li><a href="#">Vertuo Capsules</a></li>
-          <li><a href="#">Original Capsules</a></li>
-          <li><a href="#">Vertuo koffiemachines</a></li>
-          <li><a href="#">Original koffiemachines</a></li>
-          <li><a href="#">Accessoires</a></li>
-          <li><a href="#">Melkopschuimers</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3>Ontdek Nespresso</h3>
-        <ul>
-          <li><a href="#">Duurzaamheid & B-corp</a></li>
-          <li><a href="#">Promoties</a></li>
-          <li><a href="#">Koffiekeuzehulp</a></li>
-          <li><a href="#">Koffierecepten</a></li>
-          <li><a href="#">Nespresso Professional</a></li>
-          <li><a href="#">Werken bij Nespresso</a></li>
-          <li><a href="#">Vind een Boutique</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3>Mijn Account</h3>
-        <ul>
-          <li><a href="#">Log in</a></li>
-          <li><a href="#">Registreren</a></li>
-          <li><a href="#">Volg je bestelling</a></li>
-          <li><a href="#">Nespresso & More</a></li>
-          <li><a href="#">Levering</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3>Klantenservice</h3>
-        <ul>
-          <li><a href="#">Onze services</a></li>
-          <li><a href="#">Machine ondersteuning</a></li>
-          <li><a href="#">Veelgestelde vragen</a></li>
-          <li><a href="#">Retourneren</a></li>
-        </ul>
-      </section>
-    </section>
+<footer>
+  <!-- Bovenste grid -->
+  <section>
+    <article>
+      <h3>Onze producten</h3>
+      <ul>
+        <li><a href="#">Original of Vertuo</a></li>
+        <li><a href="#">Vertuo Capsules</a></li>
+        <li><a href="#">Original Capsules</a></li>
+        <li><a href="#">Vertuo koffiemachines</a></li>
+        <li><a href="#">Original koffiemachines</a></li>
+        <li><a href="#">Accessoires</a></li>
+        <li><a href="#">Melkopschuimers</a></li>
+      </ul>
+    </article>
+    <article>
+      <h3>Ontdek Nespresso</h3>
+      <ul>
+        <li><a href="#">Duurzaamheid & B-corp</a></li>
+        <li><a href="#">Promoties</a></li>
+        <li><a href="#">Koffiekeuzehulp</a></li>
+        <li><a href="#">Koffierecepten</a></li>
+        <li><a href="#">Nespresso Professional</a></li>
+        <li><a href="#">Werken bij Nespresso</a></li>
+        <li><a href="#">Vind een Boutique</a></li>
+      </ul>
+    </article>
+    <article>
+      <h3>Mijn Account</h3>
+      <ul>
+        <li><a href="#">Log in</a></li>
+        <li><a href="#">Registreren</a></li>
+        <li><a href="#">Volg je bestelling</a></li>
+        <li><a href="#">Nespresso & More</a></li>
+        <li><a href="#">Levering</a></li>
+      </ul>
+    </article>
+    <article>
+      <h3>Klantenservice</h3>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./images/svg/svgexport-24.svg" alt="Klantenservice icoon">
+            Onze services
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/svg/svgexport-24.svg" alt="Klantenservice icoon">
+            Machine ondersteuning
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/svg/svgexport-24.svg" alt="Klantenservice icoon">
+            Veelgestelde vragen
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/svg/svgexport-24.svg" alt="Klantenservice icoon">
+            Retourneren
+          </a>
+        </li>
+      </ul>
+    </article>
+  </section>
 
-    <section>
-      <article>
-        <p>Ontdek onze app</p>
-        <a href="#"><img src="/images/Svg/svgexport-25.svg" alt="android"></a>
-        <a href="#"><img src="/images/Svg/svgexport-26.svg" alt="apple"></a>
-      </article>
-      <article>
-        <p>Thuiswinkel Waarborg</p>
-        <a href="#"><img src="/images/thuiswinkel-waarborg-logo-vector.png" alt="waarborg"></a>
-      </article>
-    </section>
+  <!-- Middelste rij -->
+  <section>
+    <article>
+      <p>Ontdek onze app</p>
+      <a href="#"><img src="/images/svg/svgexport-25.svg" alt="android"></a>
+      <a href="#"><img src="/images/svg/svgexport-26.svg" alt="apple"></a>
+    </article>
+    <article>
+      <p>Thuiswinkel Waarborg</p>
+      <a href="#"><img src="/images/thuiswinkel-waarborg-logo-vector.png" alt="waarborg"></a>
+    </article>
+  </section>
 
-    <section>
-      <section><img src="/images/nl.png" alt="nlvlag"><p>Nederlands</p></section>
-      <section></section>
-      <section>
-        <ul>
-          <li><a href="#">Accessibility</a></li>
-          <li><a href="#">Legal</a></li>
-          <li><a href="#">Woordenlijst</a></li>
-          <li><a href="#">Sitemap</a></li>
-          <li><a href="#">Bedrijfsinformatie</a></li>
-          <li><a href="#">Cookies</a></li>
-        </ul>
-        <p>Alle genoemde prijzen zijn inclusief BTW.</p>
-      </section>
-    </section>
+  <!-- Taal & links -->
+  <section>
+    <article class="lang">
+      <img src="/images/nl.png" alt="nlvlag">
+      <span>Nederlands ▾</span>
+      <ul>
+        <li><a href="#">Nederlands</a></li>
+        <li><a href="#">English</a></li>
+      </ul>
+    </article>
+    <article class="legal">
+      <ul>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Legal</a></li>
+        <li><a href="#">Woordenlijst</a></li>
+        <li><a href="#">Sitemap</a></li>
+        <li><a href="#">Bedrijfsinformatie</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+      <p>Alle genoemde prijzen zijn inclusief BTW.</p>
+    </article>
+  </section>
 
-    <section>
-      <section>
-        <p>Volg Nespresso op</p>
-        <ul>
-          <li><img src="/images/svg/svgexport-29.svg" alt="facebook"></li>
-          <li><img src="/images/svg/svgexport-30.svg" alt="x"></li>
-          <li><img src="/images/svg/svgexport-31.svg" alt="instagram"></li>
-          <li><img src="/images/svg/svgexport-32.svg" alt="youtube"></li>
-          <li><img src="/images/svg/svgexport-33.svg" alt="pinterest"></li>
-        </ul>
-      </section>
-      <section><a href="#">Terug naar boven ↑</a></section>
-      <section><img src="/images/svg/svgexport-35.svg" alt="nespresso"><p>Nestlé Nespresso S.A. 2025</p></section>
-    </section>
-  </footer>
+  <!-- Onderste rij -->
+  <section>
+    <article>
+      <p>Volg Nespresso op</p>
+      <ul>
+        <li><img src="/images/svg/svgexport-29.svg" alt="facebook"></li>
+        <li><img src="/images/svg/svgexport-30.svg" alt="x"></li>
+        <li><img src="/images/svg/svgexport-31.svg" alt="instagram"></li>
+        <li><img src="/images/svg/svgexport-32.svg" alt="youtube"></li>
+        <li><img src="/images/svg/svgexport-33.svg" alt="pinterest"></li>
+      </ul>
+    </article>
+    <article><a href="#">Terug naar boven ↑</a></article>
+    <article>
+      <img src="/images/svg/svgexport-35.svg" alt="nespresso">
+      <p>Nestlé Nespresso S.A. 2025</p>
+    </article>
+  </section>
+</footer>
 </body>
 </html>
