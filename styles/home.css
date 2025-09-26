@@ -1001,3 +1001,149 @@ main > section:nth-of-type(11) a {
 main > section:nth-of-type(11) a:hover {
   background: var(--color-text-muted);
 }
+
+/* ===============================
+   Responsive: Mobiel
+================================ */
+@media (max-width: 768px) {
+  /* Hero */
+  main > section:first-of-type {
+    height: 70vh;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  main > section:first-of-type article {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  main > section:first-of-type h1 {
+    font-size: 1.8rem;
+  }
+
+  main > section:first-of-type p {
+    font-size: 1rem;
+  }
+
+  /* Producten */
+  main > section:nth-of-type(2) ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  main > section:nth-of-type(2) li button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Promoties */
+  main > section:nth-of-type(3) h2,
+  main > section:nth-of-type(3) p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  main > section:nth-of-type(3) ul {
+    margin-left: 0;
+    gap: 1rem;
+  }
+
+  /* Samra Collectie */
+  main > section:nth-of-type(4) h3 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  main > section:nth-of-type(4) ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  main > section:nth-of-type(4) li:first-child {
+    width: 100%;
+    height: auto;
+  }
+
+  main > section:nth-of-type(4) li:not(:first-child) {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Bestsellers */
+  main > section:nth-of-type(5) h2 {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  main > section:nth-of-type(5) ul:first-of-type {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  main > section:nth-of-type(5) ul:last-of-type {
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+
+  /* Boutique */
+  main > section:nth-of-type(6) article {
+    width: 90%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  /* Commitment */
+  main > section:nth-of-type(7) ul {
+    grid-template-columns: 1fr;
+  }
+
+  main > section:nth-of-type(7) ul li {
+    height: auto;
+  }
+
+  /* Help cards */
+  main > section:nth-of-type(9) ul {
+    grid-template-columns: 1fr;
+  }
+
+  /* Experience */
+  main > section:nth-of-type(10) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+  }
+
+  main > section:nth-of-type(10) div img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Te bieden */
+  main > section:nth-of-type(11) h2 {
+    font-size: 1.4rem;
+  }
+
+  main > section:nth-of-type(11) p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main > section:first-of-type h1 {
+    font-size: 1.5rem;
+  }
+
+  main > section:first-of-type p {
+    font-size: 0.9rem;
+  }
+
+  main > section:nth-of-type(3) h3 {
+    font-size: 1.2rem;
+  }
+}
+
