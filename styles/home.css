@@ -626,6 +626,7 @@ main > section:nth-of-type(6) article h2 {
   line-height: 1.4;
 }
 
+/* Groene knop */
 main > section:nth-of-type(6) article button {
   background: var(--color-green);
   color: var(--color-text-invert);
@@ -641,7 +642,8 @@ main > section:nth-of-type(6) article button:hover {
   background: var(--color-green-dark);
 }
 
-main > section:nth-of-type(6) button {
+/* Ronde pauze/play knop */
+main > section:nth-of-type(6) > button:last-of-type { /* Moet wel voor de groene knop */
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -654,11 +656,12 @@ main > section:nth-of-type(6) button {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-main > section:nth-of-type(6) button img {
+main > section:nth-of-type(6) > button:last-of-type img {
   width: 1rem;
   height: 1rem;
   display: block;
 }
+
 
 
 /* ===============================
