@@ -14,3 +14,19 @@ document.querySelectorAll("main > section").forEach(section => {
     }
   });
 });
+
+const nav = document.querySelector("header nav:nth-of-type(2)");
+  const btn = nav.querySelector("button");
+
+  btn.addEventListener("click", () => {
+    const open = nav.getAttribute("data-open") === "true";
+    nav.setAttribute("data-open", !open);
+});
+
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mainMenu = document.getElementById("main-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    toggleBtn.classList.toggle("active");
+    mainMenu.classList.toggle("open");
+  });

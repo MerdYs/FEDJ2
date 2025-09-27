@@ -12,122 +12,83 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <nav>
-      <img src="/images/Nespresso_logo.png" alt="Nespresso logo">
-      <ul>
-        <li>
-          <img src="/images/24_symbols_action_search.svg" alt="zoek icoon">
-          <p>Zoeken</p>
-        </li>
-        <li class="account">
-          <img src="/images/24_user_account.svg" alt="account icoon">
-          <span class="status-indicator">x</span>
-          <p>Account</p>
-        </li>
-        <li>
-          <img src="/images/24_symbols_misc_shoppingbag.svg" alt="winkelmand">
-          <p>Jouw winkelmand (0)</p>
-        </li>
-      </ul>
-    </nav>
+<header>
+  <!-- Topbar -->
+  <nav>
+    <!-- Burger (mobile only) -->
+    <label for="nav-toggle">
+      <span></span><span></span><span></span>
+      <em>Menu</em>
+    </label>
 
-    <!-- Nav Menu -->
-<nav>
-  <ul>
-    <li>
-      <img src="./images/svg/svgexport-2.svg" alt="koffiemenu">
-      <p>Koffie</p>
-      <ul>
-        <li><span><img src="./images/svg/svgexport-4.svg" alt="originele cups dropdown">Bestel Original koffiecups</span></li>
-        <li><span><img src="./images/svg/svgexport-5.svg" alt="vertuo cups dropdown">Bestel Vertuo koffiecups</span></li>
-        <li>Bestel zakelijke capsules&#x2197;</li>
-        <li>Vind jouw smaakmatch</li>
-        <li>Bestel je vorige order</li>
-        <li>Stel herhaalbestelling in</li>
-        <img src="./images/nes-menu-bg-coffee.png" alt="koffie achtergrond menu">
-      </ul>
-    </li>
+    <!-- Logo -->
+    <img src="/images/Nespresso_logo.png" alt="Nespresso logo">
 
-    <li>
-      <img src="./images/svg/svgexport-6.svg" alt="machine menu">
-      <p>Machines</p>
-      <ul>
-        <li><span><img src="./images/svg/svgexport-7.svg" alt="originele koffiemachines dropdown">Original koffiemachines</span></li>
-        <li><span><img src="./images/svg/svgexport-6.svg" alt="vertuo koffiemachines dropdown">Vertuo koffiemachines</span></li>
-        <li>Bestel zakelijke machines&#x2197;</li>
-        <li>Machine probleem oplossen</li>
-        <li>Machine onderhoud</li>
-        <img src="./images/nes-menu-bg-machine.png" alt="machine achtergrond menu">
-      </ul>
-    </li>
+    <!-- Actions -->
+    <ul>
+      <li>
+        <img src="/images/24_symbols_action_search.svg" alt="zoek icoon">
+        <p>Zoeken</p>
+      </li>
+      <li>
+        <img src="/images/24_user_account.svg" alt="account icoon">
+        <span>x</span>
+        <p>Account</p>
+      </li>
+      <li>
+        <img src="/images/24_symbols_misc_shoppingbag.svg" alt="winkelmand">
+        <p>Jouw winkelmand (0)</p>
+      </li>
+    </ul>
+  </nav>
 
-    <li>
-      <img src="./images/svg/svgexport-9.svg" alt="accessoires menu">
-      <p>Accessoires</p>
-      <ul>
-        <li><span>Alle accessoires</span></li>
-        <li>Nespresso Tumbler</li>
-        <li>Recycling</li>
-        <li>Giftcard</li>
-        <li>Alles voor melkrecepten</li>
-        <img src="./images/nes-menu-bg-accessoires.png" alt="accessoires achtergrond menu">
-      </ul>
-    </li>
+  <!-- Desktop mega-menu (jouw bestaande 2e nav) -->
+  <nav aria-label="Hoofdmenu">
+    <ul>
+      <li>
+        <img src="./images/svg/svgexport-2.svg" alt="">
+        <p>Koffie</p>
+        <ul>
+          <li>Bestel Original koffiecups</li>
+          <li>Bestel Vertuo koffiecups</li>
+        </ul>
+      </li>
+      <li>
+        <img src="./images/svg/svgexport-6.svg" alt="">
+        <p>Machines</p>
+      </li>
+      <li>
+        <img src="./images/svg/svgexport-9.svg" alt="">
+        <p>Accessoires</p>
+      </li>
+      <li>
+        <img src="./images/svg/svgexport-10.svg" alt="">
+        <p>Abonnement</p>
+      </li>
+    </ul>
+  </nav>
 
-    <li>
-      <img src="./images/svg/svgexport-10.svg" alt="abonnement menu">
-      <p>Abonnement</p>
-      <ul>
-        <li><span><img src="./images/svg/svgexport-6.svg" alt="abonnement machine menu dropdown">Nespresso Abonnement</span></li>
-        <li><span><img src="./images/svg/svgexport-5.svg" alt="abonnement vertuo menu dropdown">Meer over Nespresso abonnement</span></li>
-        <li>Beheer je Nespresso abonnement</li>
-        <li>Beheer je Nespresso Vanzelf</li>
-      </ul>
-    </li>
+  <!-- Toggle input -->
+  <input type="checkbox" id="nav-toggle" hidden>
 
-    <li>
-      <img src="./images/svg/svgexport-11.svg" alt="service menu">
-      <p>Service & Voordelen</p>
-      <ul>
-        <li>Alle bezorg-en bestelservices</li>
-        <li>Nespresso & More: Extra voordelen</li>
-      </ul>
-    </li>
+  <!-- Mobile drawer -->
+  <aside>
+    <header>
+      <label for="nav-toggle">Sluit</label>
+      <img src="/images/Nespresso_logo.png" alt="Nespresso">
+    </header>
+    <ul>
+      <li><a href="#"><img src="./images/svg/svgexport-2.svg"> <span>Koffie</span></a></li>
+      <li><a href="#"><img src="./images/svg/svgexport-6.svg"> <span>Machines</span></a></li>
+      <li><a href="#"><img src="./images/svg/svgexport-9.svg"> <span>Accessoires</span></a></li>
+      <li><a href="#"><img src="./images/svg/svgexport-10.svg"> <span>Abonnement</span></a></li>
+    </ul>
+  </aside>
 
-    <li>
-      <img src="./images/svg/svgexport-12.svg" alt="boutique menu">
-      <p>Vind een Boutique</p>
-    </li>
+  <!-- Scrim -->
+  <label for="nav-toggle"></label>
+</header>
 
-    <li>
-      <img src="./images/svg/svgexport-13.svg" alt="duurzaamheid menu">
-      <p>Duurzaamheid & Recycling</p>
-      <ul>
-        <li>Recyclezak bestellen</li>
-        <li>Recycling</li>
-        <li>Duurzaamheid & B-corp</li>
-        <li>Koffie inspiratie - Recepten en duurzaamheid</li>
-      </ul>
-    </li>
-
-    <li>
-      <img src="./images/svg/svgexport-14.svg" alt="contact menu">
-      <p>Contact & FAQ</p>
-    </li>
-
-    <li>
-      <img src="./images/svg/svgexport-15.svg" alt="professioneel menu">
-      <p>Professioneel&#x2197;</p>
-      <ul>
-        <li>Zakelijke capsules&#x2197;</li>
-        <li>Zakelijke machines&#x2197;</li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-  </header>
 
   <!-- Hero -->
   <main>
