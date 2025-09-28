@@ -15,18 +15,21 @@ document.querySelectorAll("main > section").forEach(section => {
   });
 });
 
-const nav = document.querySelector("header nav:nth-of-type(2)");
-  const btn = nav.querySelector("button");
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("hamburger-btn");
+  const aside = document.querySelector("header > aside");
+  const text = btn.querySelector("p");
+  const icon = btn.querySelector("img");
 
   btn.addEventListener("click", () => {
-    const open = nav.getAttribute("data-open") === "true";
-    nav.setAttribute("data-open", !open);
-});
+    const isOpen = aside.classList.toggle("open");
 
-  const toggleBtn = document.getElementById("menu-toggle");
-  const mainMenu = document.getElementById("main-menu");
+    // Wissel tekst
+    text.textContent = isOpen ? "Sluit" : "Menu";
 
-  toggleBtn.addEventListener("click", () => {
-    toggleBtn.classList.toggle("active");
-    mainMenu.classList.toggle("open");
+    // Wissel icoon
+    icon.src = isOpen 
+    ? "./images/svg2/svgexport-33.svg"    // sluit icoon
+    : "./images/svg/svgexport-16.svg"; // hamburger icoon
   });
+});

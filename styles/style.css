@@ -57,33 +57,7 @@
 
 
 
-/* ===============================
-   Reset & base
-================================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
-body {
-  font-family: var(--font-main);
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--color-text-body);
-  background: var(--color-bg-default);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
 
 /* Fonts */
 @font-face {
@@ -132,26 +106,48 @@ a, h4 {
 }
 
 /* ===============================
-   Header topbar
+   Basis reset
+================================ */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; height: auto; }
+
+/* ===============================
+   Topbar
 ================================ */
 header nav:first-of-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4rem;
-  padding: 0 18vw;
+  padding: 0 1rem;
   background: var(--color-bg-default);
+  position: relative;
+  z-index: 1000;
+  padding: 0 2rem;
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
 header nav:first-of-type img:first-child {
   height: 2rem;
 }
 
+/* Rechter icoon lijst */
 header nav:first-of-type ul {
   list-style: none;
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin: 0;
 }
 
 header nav:first-of-type ul li {
@@ -159,7 +155,7 @@ header nav:first-of-type ul li {
   align-items: center;
   gap: 0.4rem;
   font-size: 0.9rem;
-  padding: 0.45rem 1rem;
+  padding: 0.1rem 1rem;
   border: 0.1rem solid var(--color-border);
   border-radius: 10rem;
   cursor: pointer;
@@ -175,11 +171,11 @@ header nav:first-of-type ul li img {
   width: 1.5rem;
 }
 
-header nav:first-of-type ul li:nth-of-type(2) {
+header nav:first-of-type ul li.account {
   position: relative;
 }
 
-header nav:first-of-type ul li:nth-of-type(2) span {
+header nav:first-of-type ul li.account .status-indicator {
   position: absolute;
   top: 0.3rem;
   left: 1.7rem;
@@ -196,31 +192,6 @@ header nav:first-of-type ul li:nth-of-type(2) span {
   border: 2px solid var(--color-white);
   line-height: 1;
   cursor: default;
-}
-
-/* ===============================
-   Hamburger knop
-================================ */
-header nav:first-of-type > label {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 1.5rem;
-  height: 1.2rem;
-  cursor: pointer;
-}
-
-header nav:first-of-type > label span {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background: var(--color-black);
-}
-
-header nav:first-of-type > label em {
-  font-size: 0.7rem;
-  font-style: normal;
-  margin-top: 0.3rem;
 }
 
 /* ===============================
@@ -269,19 +240,17 @@ header nav:nth-of-type(2) ul li p {
   line-height: 1.1;
 }
 
-/* === Dropdowns === */
+/* Dropdowns */
 header nav:nth-of-type(2) ul li ul {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  width: auto;
   padding: 1.25rem;
   display: none;
   flex-direction: column;
   gap: .25rem;
   align-items: flex-start;
-  text-align: left;
   background: var(--color-white);
   box-shadow: var(--shadow-strong);
   z-index: 1000;
@@ -295,7 +264,6 @@ header nav:nth-of-type(2) ul li ul li {
   list-style: none;
   padding: .55rem 0;
   color: var(--color-text-body);
-  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -304,21 +272,6 @@ header nav:nth-of-type(2) ul li ul li span {
   align-items: center;
   gap: 0.5rem;
   font-weight: bold;
-  color: var(--color-text-body);
-}
-
-header nav:nth-of-type(2) ul li ul li span img {
-  width: 1rem;
-  height: 1rem;
-}
-
-header nav:nth-of-type(2) ul li:hover {
-  background: var(--color-white);
-}
-
-header nav:nth-of-type(2) ul li ul li:hover {
-  color: var(--color-gold);
-  text-decoration: underline;
 }
 
 header nav:nth-of-type(2) ul li ul img {
@@ -333,84 +286,108 @@ header nav:nth-of-type(2) ul li ul img {
 }
 
 /* ===============================
+   Hamburger knop
+================================ */
+header nav:first-of-type button {
+  order: -1; /* zet de knop voor het logo */
+  display: none; /* standaard uit */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 0.2rem;
+}
+
+header nav:first-of-type > button img {
+  width: 1.5rem;
+  height: auto;
+}
+
+header nav:first-of-type > button span {
+  width: 1.5rem;
+  height: 2px;
+  background: var(--color-black);
+  display: block;
+  transition: all 0.3s ease;
+}
+
+header nav:first-of-type > button p {
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+/* Hamburger → X */
+#hamburger-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===============================
    Mobile drawer menu
 ================================ */
 header > aside {
   position: fixed;
   inset: 0 auto 0 0;
-  width: min(22rem, 85vw);
+  width: min(20rem, 80vw);
   background: var(--color-white);
   transform: translateX(-100%);
-  transition: transform .3s ease;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-}
-
-header > aside > header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  transition: transform 0.3s ease;
+  z-index: 999;
   padding: 1rem;
-  border-bottom: 1px solid var(--color-gray-200);
 }
 
-header > aside > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header > aside > ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: .5rem;
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid var(--color-gray-200);
-  color: var(--color-black);
-  text-decoration: none;
-}
-
-/* Scrim */
-header > label:last-of-type {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.35);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .3s ease;
-  z-index: 9998;
-}
-
-/* ===============================
-   Toggle gedrag
-================================ */
-#nav-toggle:checked ~ aside {
+header > aside.open {
   transform: translateX(0);
 }
-#nav-toggle:checked ~ label:last-of-type {
-  opacity: 1;
-  pointer-events: auto;
+
+header > aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* ===============================
-   Responsive
-================================ */
-@media (max-width: 960px) {
-  header nav:nth-of-type(2) { display: none; }  /* desktop menu verbergen */
-  header nav:first-of-type > label { display: flex; } /* burger tonen */
+header > aside ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1rem;
 }
 
-@media (min-width: 961px) {
-  header > aside,
-  header > label:last-of-type { display: none; }
+/* icoon links */
+header > aside ul li img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* tekst in het midden */
+header > aside ul li p:nth-of-type(1) {
+  flex-grow: 1;
+  margin: 0;
+}
+
+/* pijl rechts */
+header > aside ul li p:nth-of-type(2) {
+  font-weight: bold;
+  margin: 0;
 }
 
 
 /* ===============================
    Footer
 ================================ */
+
 footer {
   background: var(--color-bg-default);
   color: var(--color-text-body);
@@ -428,28 +405,45 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* ===============================
+   Bovenste grid (dropdowns)
+================================ */
 footer > section:first-of-type {
   max-width: 77.5rem;
   margin: 0 auto;
   padding: 1.25rem 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem 2rem;
+  gap: 2rem;
 }
 
-footer > section:first-of-type h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.2;
+footer > section:first-of-type summary {
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+footer > section:first-of-type summary::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+}
+
+footer > section:first-of-type details[open] summary::after {
+  content: "▴";
 }
 
 footer > section:first-of-type ul {
   list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  margin: 0;
-  padding: 0;
 }
 
 footer > section:first-of-type ul li a {
@@ -464,12 +458,15 @@ footer > section:first-of-type ul li a img {
   flex-shrink: 0;
 }
 
+/* ===============================
+   Middelste rij (app & waarborg)
+================================ */
 footer > section:nth-of-type(2) {
   max-width: 77.5rem;
   margin: 0 auto;
   padding: 1.25rem 1rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 4rem;
 }
@@ -488,6 +485,9 @@ footer > section:nth-of-type(2) img {
   height: 2.5rem;
 }
 
+/* ===============================
+   Taal & legal
+================================ */
 footer > section:nth-of-type(3) {
   max-width: 77.5rem;
   margin: 0 auto;
@@ -497,7 +497,7 @@ footer > section:nth-of-type(3) {
   align-items: flex-start;
 }
 
-footer > section:nth-of-type(3) .lang {
+footer > section:nth-of-type(3) article:first-of-type {
   position: relative;
   display: flex;
   align-items: center;
@@ -505,36 +505,15 @@ footer > section:nth-of-type(3) .lang {
   cursor: pointer;
 }
 
-footer > section:nth-of-type(3) .lang img {
+footer > section:nth-of-type(3) article:first-of-type img {
   width: 1.25rem;
 }
 
-footer > section:nth-of-type(3) .lang ul {
-  position: absolute;
-  top: 120%;
-  left: 0;
-  background: var(--color-bg-default);
-  list-style: none;
-  padding: 0.4rem 0.6rem;
-  margin: 0;
-  border: 0.1rem solid var(--color-border);
-  display: none;
-}
-
-footer > section:nth-of-type(3) .lang:hover ul,
-footer > section:nth-of-type(3) .lang:focus-within ul {
-  display: block;
-}
-
-footer > section:nth-of-type(3) .lang ul li {
-  padding: 0.25rem 0;
-}
-
-footer > section:nth-of-type(3) .legal {
+footer > section:nth-of-type(3) article:last-of-type {
   text-align: right;
 }
 
-footer > section:nth-of-type(3) .legal ul {
+footer > section:nth-of-type(3) article:last-of-type ul {
   list-style: none;
   margin: 0 0 0.25rem;
   padding: 0;
@@ -542,12 +521,15 @@ footer > section:nth-of-type(3) .legal ul {
   gap: 1rem;
 }
 
-footer > section:nth-of-type(3) .legal p {
+footer > section:nth-of-type(3) article:last-of-type p {
   margin: 0;
   font-size: 0.8rem;
   color: var(--color-text-light);
 }
 
+/* ===============================
+   Onderrij
+================================ */
 footer > section:nth-of-type(4) {
   background: var(--color-bg-light);
   padding: 1.25rem 18vw;
@@ -618,4 +600,87 @@ footer > section:nth-of-type(4) article:nth-of-type(3) p {
   margin: 0;
   font-size: 0.75rem;
   color: var(--color-text-light);
+}
+
+/* ===============================
+   Responsive gedrag
+================================ */
+@media (max-width: 960px) {
+  header nav:nth-of-type(2) { display: none; } /* desktop menu weg */
+  header nav:first-of-type button { display: flex; }
+  header nav:first-of-type ul li p { display: none; } /* icon labels weg */
+  header nav:first-of-type ul li {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+  }
+  header nav:first-of-type ul li.account .status-indicator {
+    top: -0.3rem;   /* omhoog */
+    left: auto;     /* reset left */
+    right: -0.3rem; /* naar rechtsboven */
+  }
+footer > section:first-of-type {
+    display: block !important;
+  }
+
+  /* Sectie 2: App + Waarborg onder elkaar */
+  footer > section:nth-of-type(2) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  footer > section:nth-of-type(2) article {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  footer > section:nth-of-type(2) article img {
+    height: 2rem;
+  }
+
+  /* Sectie 3: Taal + Legal onder elkaar */
+  footer > section:nth-of-type(3) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  footer > section:nth-of-type(3) .legal {
+    text-align: left;
+    width: 100%;
+  }
+
+  footer > section:nth-of-type(3) .legal ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+    footer > section:nth-of-type(3) p {
+    flex-direction: row;
+    justify-self: start;
+  }
+
+  /* Sectie 4: alles onder elkaar */
+  footer > section:nth-of-type(4) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.25rem 1rem;
+  }
+
+  footer > section:nth-of-type(4) article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+@media (min-width: 961px) {
+  header > aside { display: none; }
+}
 }

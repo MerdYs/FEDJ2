@@ -345,7 +345,7 @@ main > section:nth-of-type(4) .hotspot {
 main > section:nth-of-type(4) .tooltip {
   position: absolute;
   top: 120%; /* onder de hotspot */
-  left: 50%;
+  left: 1%;
   transform: translateX(-50%);
   background: var(--color-white);
   border-radius: .5rem;
@@ -353,7 +353,6 @@ main > section:nth-of-type(4) .tooltip {
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
   width: 14rem;
   z-index: 4;
 
@@ -365,8 +364,6 @@ main > section:nth-of-type(4) .tooltip {
 main > section:nth-of-type(4) .hotspot:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-4%, 10%);
-  z-index: 3;
 }
 
 /* Titel */
@@ -411,15 +408,20 @@ main > section:nth-of-type(4) .tooltip p:last-of-type button {
 /* Grote afbeelding (3 hotspots) */
 main > section:nth-of-type(4) li:first-child .hotspot:nth-of-type(1) {
   top: 51%;
-  left: 20%;
+  left: 17%;
+  transform: translate(100%, 10%);
+  z-index: 3;
 }
 main > section:nth-of-type(4) li:first-child .hotspot:nth-of-type(2) {
   top: 63%;
   left: 32.5%;
+  z-index: 2;
 }
 main > section:nth-of-type(4) li:first-child .hotspot:nth-of-type(3) {
   top: 39%;
-  right: 13%;
+  right: 20%;
+  transform: translate(70%, 10%);
+  z-index: 3;
 }
 
 /* Kleine afbeelding 1 (2 hotspots) */
@@ -437,21 +439,22 @@ main > section:nth-of-type(4) li:nth-of-type(3) .hotspot:nth-of-type(1) {
   bottom: 30%;
   left: 12%;
 }
-main > section:nth-of-type(4) li:nth-of-type(2) .hotspot:nth-of-type(2) {
+main > section:nth-of-type(4) li:nth-of-type(3) .hotspot:nth-of-type(2) {
   bottom: 30%;
   left: 30%;
 }
 main > section:nth-of-type(4) li:nth-of-type(3) .hotspot:nth-of-type(3) {
   top: 40%;
-  right: 28%;
+  right: 50%;
 }
-
-
 
 
 /* ===============================
    Bestsellers
 ================================ */
+main > section:nth-of-type(5) {
+  position: relative;
+}
 main > section:nth-of-type(5) h2 {
   font-size: 2rem;
   margin: 1rem 0 2rem 9rem;
@@ -463,6 +466,37 @@ main > section:nth-of-type(5) ul:first-of-type {
   list-style: none;
   padding: 0;
   margin: 1rem 9rem 0;
+}
+
+/* Eerste twee buttons in de sectie = pijltjes */
+main > section:nth-of-type(5) > button:nth-of-type(1),
+main > section:nth-of-type(5) > button:nth-of-type(2) {
+  position: absolute;
+  top: 1.2rem;
+  right: 9rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-gray-200);
+  color: var(--color-black);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* De tweede knop (rechter pijl) verschuiven */
+main > section:nth-of-type(5) > button:nth-of-type(2) {
+  right: 6rem;
+}
+
+/* Hover-effect */
+main > section:nth-of-type(5) > button:nth-of-type(1):hover,
+main > section:nth-of-type(5) > button:nth-of-type(2):hover {
+  background: var(--color-black);
+  color: var(--color-white);
 }
 
 main > section:nth-of-type(5) ul:first-of-type li button {
@@ -1051,47 +1085,96 @@ main > section:nth-of-type(11) a:hover {
   main > section:nth-of-type(3) ul {
     margin-left: 0;
     gap: 1rem;
-    overflow: hidden;
   }
 
   /* Samra Collectie */
-  main > section:nth-of-type(4) h3 {
+ main > section:nth-of-type(4) h3 {
     margin-left: 0;
-    text-align: center;
-    font-size: 1.4rem;
+    text-align: left;
+    font-size: 3rem;
   }
 
+  /* Grid fix */
   main > section:nth-of-type(4) ul {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
   }
 
   main > section:nth-of-type(4) li:first-child {
+    grid-column: 1 / -1;
+    grid-row: 1;
     width: 100%;
     height: auto;
   }
 
-  main > section:nth-of-type(4) li:not(:first-child) {
+  main > section:nth-of-type(4) li:nth-of-type(2),
+  main > section:nth-of-type(4) li:nth-of-type(3) {
+    grid-row: 2;
     width: 100%;
     height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  main > section:nth-of-type(4) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
   }
 
   /* Bestsellers */
+  main > section:nth-of-type(5) {
+    position: relative;
+  }
+
+  /* Titel */
   main > section:nth-of-type(5) h2 {
-    margin: 1rem 0;
-    text-align: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    margin: 1rem 1rem 1.5rem;
   }
 
+  /* Pills blijven scrollbaar */
   main > section:nth-of-type(5) ul:first-of-type {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1rem 0;
+    margin: 0 1rem 1rem;
+    display: flex;
+    gap: .5rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
   }
 
+  main > section:nth-of-type(5) ul:first-of-type li {
+    flex: 0 0 auto;
+  }
+
+  /* Productlijst wordt een horizontale scroll */
   main > section:nth-of-type(5) ul:last-of-type {
-    margin: 0;
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 1rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin: 0 1rem 1rem;
+    padding: 0;
+  }
+
+  main > section:nth-of-type(5) ul:last-of-type li {
+    flex: 0 0 80%; /* kaart neemt ~80% van de breedte */
+    max-width: 18.75rem;
+  }
+
+  /* Afbeelding netjes */
+  main > section:nth-of-type(5) ul:last-of-type li img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Buttons verbergen */
+  main > section:nth-of-type(5) > button:nth-of-type(1),
+  main > section:nth-of-type(5) > button:nth-of-type(2) {
+    display: none;
   }
 
   /* Boutique */
@@ -1102,17 +1185,57 @@ main > section:nth-of-type(11) a:hover {
   }
 
   /* Commitment */
-  main > section:nth-of-type(7) ul {
-    grid-template-columns: 1fr;
+main > section:nth-of-type(7) h2 {
+    font-size: 1.6rem;
+    margin: 0 1rem 0.5rem;
   }
 
+  main > section:nth-of-type(7) > p {
+    font-size: 0.9rem;
+    margin: 0 1rem 1.5rem;
+  }
+
+  /* Kaartenlijst horizontaal scrollbaar */
+  main > section:nth-of-type(7) ul {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 1rem;
+    padding: 0;
+  }
+
+  main > section:nth-of-type(7) ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Kaarten naast elkaar schuiven */
   main > section:nth-of-type(7) ul li {
+    flex: 0 0 80%; /* neemt bijna heel scherm in */
     height: auto;
   }
 
   /* Help cards */
-  main > section:nth-of-type(9) ul {
-    grid-template-columns: 1fr;
+ main > section:nth-of-type(9) ul {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 1rem;
+  }
+
+  main > section:nth-of-type(9) ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  main > section:nth-of-type(9) ul li {
+    flex: 0 0 80%; /* kaart neemt 80% van scherm */
+    max-width: 20rem; /* optioneel, voorkomt te breed */
+    
+    border-radius: 0.75rem;
+    padding: 1.5rem 1rem;
   }
 
   /* Experience */
