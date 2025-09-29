@@ -95,7 +95,7 @@ h2, h3 {
   font-weight: 300;
 }
 
-header, h1, p, summary {
+header, h1, p, summary, span {
   font-family: regular;
   font-weight: 400;
 }

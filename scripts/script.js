@@ -24,12 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
   btn.addEventListener("click", () => {
     const isOpen = aside.classList.toggle("open");
 
-    // Wissel tekst
     text.textContent = isOpen ? "Sluit" : "Menu";
 
-    // Wissel icoon
     icon.src = isOpen 
-    ? "./images/svg2/svgexport-33.svg"    // sluit icoon
-    : "./images/svg/svgexport-16.svg"; // hamburger icoon
+    ? "./images/svg2/svgexport-33.svg"
+    : "./images/svg/svgexport-16.svg";
   });
 });

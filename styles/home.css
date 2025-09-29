@@ -11,7 +11,6 @@ main > section:first-of-type {
   justify-content: flex-start;
   color: var(--color-text-invert);
 }
-
 main > section:first-of-type video {
   position: absolute;
   top: 0;
@@ -21,24 +20,20 @@ main > section:first-of-type video {
   object-fit: cover;
   z-index: 0;
 }
-
 main > section:first-of-type article {
   position: relative;
   z-index: 1;
   max-width: 37.5rem;
   margin-left: 5%;
 }
-
 main > section:first-of-type h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-
 main > section:first-of-type p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
-
 main > section:first-of-type a {
   display: inline-block;
   padding: 0.7rem 1.5rem;
@@ -48,12 +43,10 @@ main > section:first-of-type a {
   text-decoration: none;
   transition: all var(--transition-fast);
 }
-
 main > section:first-of-type a:hover {
   background: var(--color-black);
   color: var(--color-text-invert);
 }
-
 main > section:first-of-type button {
   position: absolute;
   bottom: 1rem;
@@ -66,13 +59,11 @@ main > section:first-of-type button {
   z-index: 2;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 main > section:first-of-type button img {
   width: 1rem;
   height: 1rem;
   display: block;
 }
-
 
 
 /* ===============================
@@ -81,7 +72,6 @@ main > section:first-of-type button img {
 main > section:nth-of-type(2) {
   padding: 3rem 5%;
 }
-
 main > section:nth-of-type(2) ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -89,14 +79,12 @@ main > section:nth-of-type(2) ul {
   list-style: none;
   padding: 0;
 }
-
 main > section:nth-of-type(2) li {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
 }
-
 main > section:nth-of-type(2) h3 {
   position: absolute;
   top: 1rem;
@@ -107,15 +95,12 @@ main > section:nth-of-type(2) h3 {
   text-shadow: 0 2px 4px rgba(0,0,0,0.6);
   z-index: 2;
 }
-
 main > section:nth-of-type(2) img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 1rem;
 }
-
-/* Donkere overlay boven afbeelding */
 main > section:nth-of-type(2) li::before {
   content: "";
   position: absolute;
@@ -124,13 +109,13 @@ main > section:nth-of-type(2) li::before {
   z-index: 1;
   transition: background 0.5s ease;
 }
-
 main > section:nth-of-type(2) li:hover::before {
   opacity: 1;
 }
 
+
 /* ===============================
-   Buttons
+   Producten – Buttons
 ================================ */
 main > section:nth-of-type(2) button {
   position: absolute;
@@ -146,58 +131,38 @@ main > section:nth-of-type(2) button {
   pointer-events: none;
   z-index: 2;
 }
-
-/* Posities van de knoppen */
-main > section:nth-of-type(2) li button:nth-of-type(1) {
-  top: 40%;
-}
-main > section:nth-of-type(2) li button:nth-of-type(2) {
-  top: 55%;
-}
-main > section:nth-of-type(2) li button:nth-of-type(3) {
-  top: 70%;
-}
-
-/* Stijl eerste en tweede knop (wit -> zwart op hover) */
+main > section:nth-of-type(2) li button:nth-of-type(1) { top: 40%; }
+main > section:nth-of-type(2) li button:nth-of-type(2) { top: 55%; }
+main > section:nth-of-type(2) li button:nth-of-type(3) { top: 70%; }
 main > section:nth-of-type(2) li button:nth-of-type(1),
 main > section:nth-of-type(2) li button:nth-of-type(2) {
   background: var(--color-text-invert);
   color: var(--color-black);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
 main > section:nth-of-type(2) li button:nth-of-type(1):hover,
 main > section:nth-of-type(2) li button:nth-of-type(2):hover {
   background: var(--color-black);
   color: var(--color-text-invert);
 }
-
-/* Stijl derde knop (transparant met witte rand) */
 main > section:nth-of-type(2) li button:nth-of-type(3) {
   background: transparent;
   color: var(--color-text-invert);
   border: 2px solid var(--color-text-invert);
   box-shadow: none;
 }
-
 main > section:nth-of-type(2) li button:nth-of-type(3):hover {
   background: var(--color-text-invert);
   color: var(--color-black);
 }
-
 main > section:nth-of-type(2) li:hover::before {
   background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 10rem);
 }
-
-/* ===============================
-   Hover functionaliteit
-================================ */
 main > section:nth-of-type(2) li:hover button {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -5px);
 }
-
 
 
 /* ===============================
@@ -206,19 +171,16 @@ main > section:nth-of-type(2) li:hover button {
 main > section:nth-of-type(3) {
   padding: 3rem 5%;
 }
-
 main > section:nth-of-type(3) h2 {
   font-size: 2rem;
   margin-bottom: .5rem;
   margin-left: 10rem;
 }
-
 main > section:nth-of-type(3) p {
   margin-bottom: 2rem;
   margin-left: 10rem;
   color: var(--color-text-light);
 }
-
 main > section:nth-of-type(3) ul {
   display: flex;
   gap: 1.5rem;
@@ -228,7 +190,6 @@ main > section:nth-of-type(3) ul {
   list-style: none;
   margin-left: 8rem;
 }
-
 main > section:nth-of-type(3) li {
   position: relative;
   flex: 0 0 20rem;
@@ -238,14 +199,12 @@ main > section:nth-of-type(3) li {
   scroll-snap-align: start;
   cursor: pointer;
 }
-
 main > section:nth-of-type(3) img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
 main > section:nth-of-type(3) h4,
 main > section:nth-of-type(3) h3 {
   position: absolute;
@@ -255,18 +214,15 @@ main > section:nth-of-type(3) h3 {
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
   z-index: 1;
 }
-
 main > section:nth-of-type(3) h4 {
   top: 1rem;
   font-size: 0.9rem;
   font-weight: 500;
 }
-
 main > section:nth-of-type(3) h3 {
   top: 3rem;
   font-size: 1.9rem;
 }
-
 main > section:nth-of-type(3) li::before {
   content: "";
   position: absolute;
@@ -275,19 +231,18 @@ main > section:nth-of-type(3) li::before {
   z-index: 0;
 }
 
+
 /* ===============================
    Samra Collectie
 ================================ */
 main > section:nth-of-type(4) {
   padding: 3rem 5%;
 }
-
 main > section:nth-of-type(4) h3 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
   margin-left: 19rem;
 }
-
 main > section:nth-of-type(4) ul {
   display: grid;
   grid-template-columns: 45rem 24rem;
@@ -298,23 +253,19 @@ main > section:nth-of-type(4) ul {
   justify-content: center;
   align-items: center;
 }
-
 main > section:nth-of-type(4) li {
   position: relative;
   border-radius: 1rem;
 }
-
 main > section:nth-of-type(4) li:first-child {
   grid-row: span 2;
   width: 45rem;
   height: 45rem;
 }
-
 main > section:nth-of-type(4) li:not(:first-child) {
   width: 24rem;
   height: 22rem;
 }
-
 main > section:nth-of-type(4) img {
   width: 100%;
   height: 100%;
@@ -325,7 +276,10 @@ main > section:nth-of-type(4) img {
   z-index: 0;
 }
 
-/* Hotspots basis */
+
+/* ===============================
+   Samra – Hotspots
+================================ */
 main > section:nth-of-type(4) .hotspot {
   position: absolute;
   width: 1rem;
@@ -339,12 +293,9 @@ main > section:nth-of-type(4) .hotspot {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-
-
-/* Tooltip */
 main > section:nth-of-type(4) .tooltip {
   position: absolute;
-  top: 120%; /* onder de hotspot */
+  top: 120%;
   left: 1%;
   transform: translateX(-50%);
   background: var(--color-white);
@@ -355,32 +306,24 @@ main > section:nth-of-type(4) .tooltip {
   pointer-events: none;
   width: 14rem;
   z-index: 4;
-
   display: flex;
   flex-direction: column;
   gap: .3rem;
 }
-
 main > section:nth-of-type(4) .hotspot:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
 }
-
-/* Titel */
 main > section:nth-of-type(4) .tooltip h4 {
   margin: 0;
   font-size: .9rem;
   font-weight: bold;
 }
-
-/* Beschrijving */
 main > section:nth-of-type(4) .tooltip p {
   margin: 0;
   font-size: .8rem;
   color: var(--color-gray-800);
 }
-
-/* Laatste regel = prijs + knop */
 main > section:nth-of-type(4) .tooltip p:last-of-type {
   display: flex;
   justify-content: space-between;
@@ -388,8 +331,6 @@ main > section:nth-of-type(4) .tooltip p:last-of-type {
   font-weight: bold;
   color: var(--color-green);
 }
-
-/* Knop */
 main > section:nth-of-type(4) .tooltip p:last-of-type button {
   background: var(--color-green);
   color: var(--color-text-invert);
@@ -401,11 +342,9 @@ main > section:nth-of-type(4) .tooltip p:last-of-type button {
 }
 
 
-/* ======================
-   Hotspot-posities
-   ====================== */
-
-/* Grote afbeelding (3 hotspots) */
+/* ===============================
+   Samra – Hotspot-posities
+================================ */
 main > section:nth-of-type(4) li:first-child .hotspot:nth-of-type(1) {
   top: 51%;
   left: 17%;
@@ -423,8 +362,6 @@ main > section:nth-of-type(4) li:first-child .hotspot:nth-of-type(3) {
   transform: translate(70%, 10%);
   z-index: 3;
 }
-
-/* Kleine afbeelding 1 (2 hotspots) */
 main > section:nth-of-type(4) li:nth-of-type(2) .hotspot:nth-of-type(1) {
   top: 55%;
   left: 42%;
@@ -433,8 +370,6 @@ main > section:nth-of-type(4) li:nth-of-type(2) .hotspot:nth-of-type(2) {
   top: 69%;
   left: 55%;
 }
-
-/* Kleine afbeelding 2 (3 hotspots) */
 main > section:nth-of-type(4) li:nth-of-type(3) .hotspot:nth-of-type(1) {
   bottom: 30%;
   left: 12%;
@@ -450,25 +385,17 @@ main > section:nth-of-type(4) li:nth-of-type(3) .hotspot:nth-of-type(3) {
 
 
 /* ===============================
-   Bestsellers
+   Bestseller producten
 ================================ */
 main > section:nth-of-type(5) {
   position: relative;
 }
+
 main > section:nth-of-type(5) h2 {
   font-size: 2rem;
   margin: 1rem 0 2rem 9rem;
 }
 
-main > section:nth-of-type(5) ul:first-of-type {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 1rem 9rem 0;
-}
-
-/* Eerste twee buttons in de sectie = pijltjes */
 main > section:nth-of-type(5) > button:nth-of-type(1),
 main > section:nth-of-type(5) > button:nth-of-type(2) {
   position: absolute;
@@ -487,19 +414,25 @@ main > section:nth-of-type(5) > button:nth-of-type(2) {
   justify-content: center;
 }
 
-/* De tweede knop (rechter pijl) verschuiven */
 main > section:nth-of-type(5) > button:nth-of-type(2) {
   right: 6rem;
 }
 
-/* Hover-effect */
 main > section:nth-of-type(5) > button:nth-of-type(1):hover,
 main > section:nth-of-type(5) > button:nth-of-type(2):hover {
   background: var(--color-black);
   color: var(--color-white);
 }
 
-main > section:nth-of-type(5) ul:first-of-type li button {
+main > section:nth-of-type(5) ul:nth-of-type(1) {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 9rem 0;
+}
+
+main > section:nth-of-type(5) ul:nth-of-type(1) li button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -512,15 +445,15 @@ main > section:nth-of-type(5) ul:first-of-type li button {
   transition: background 0.2s;
 }
 
-main > section:nth-of-type(5) ul:first-of-type li img {
+main > section:nth-of-type(5) ul:nth-of-type(1) li img {
   width: 1.3rem;
 }
 
-main > section:nth-of-type(5) ul:first-of-type li button:hover {
+main > section:nth-of-type(5) ul:nth-of-type(1) li button:hover {
   background: var(--color-gray-100);
 }
 
-main > section:nth-of-type(5) ul:last-of-type {
+main > section:nth-of-type(5) ul:nth-of-type(2) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
@@ -529,61 +462,66 @@ main > section:nth-of-type(5) ul:last-of-type {
   margin: 0 9rem 0;
 }
 
-main > section:nth-of-type(5) ul:last-of-type li {
+main > section:nth-of-type(5) ul:nth-of-type(2) li {
   background: var(--color-white);
   border: 0.1rem solid var(--color-gray-200);
   border-radius: 1rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  transition: border 0.2s ease;
 }
 
-main > section:nth-of-type(5) ul:last-of-type li:hover {
+main > section:nth-of-type(5) ul:nth-of-type(2) li:hover {
   border: 0.06rem solid var(--color-gray-800);
 }
 
-main > section:nth-of-type(5) ul:last-of-type li p:first-of-type {
+main > section:nth-of-type(5) ul:nth-of-type(2) li p:first-of-type {
   background: var(--color-gold);
   color: var(--color-white);
   font-size: 0.7rem;
-  padding: 0 0.6rem 0;
+  padding: 0 0.6rem;
   border-radius: 0.2rem;
   margin: 0 0 0.5rem 0;
   align-self: flex-start;
 }
 
-main > section:nth-of-type(5) ul:last-of-type li img {
+main > section:nth-of-type(5) ul:nth-of-type(2) li img {
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 1rem auto;
   display: block;
 }
 
-main > section:nth-of-type(5) ul:last-of-type li h4 {
+main > section:nth-of-type(5) ul:nth-of-type(2) li h4 {
   font-size: 0.95rem;
   margin: 0.5rem 0 0.25rem;
 }
 
-main > section:nth-of-type(5) ul:last-of-type li p:nth-of-type(2) {
+main > section:nth-of-type(5) ul:nth-of-type(2) li p:nth-of-type(2) {
   font-size: 0.85rem;
   color: var(--color-text-muted);
   margin: 0 0 1rem 0;
 }
 
-main > section:nth-of-type(5) ul:last-of-type li article {
+main > section:nth-of-type(5) ul:nth-of-type(2) li article {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
 }
 
-main > section:nth-of-type(5) ul:last-of-type li article p {
+main > section:nth-of-type(5) ul:nth-of-type(2) li article p {
   font-size: 0.95rem;
   margin: 0;
+  font-weight: bold;
   color: var(--color-black);
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.3rem;
 }
 
-main > section:nth-of-type(5) ul:last-of-type li article button {
+/* Plus-knop */
+main > section:nth-of-type(5) ul:nth-of-type(2) li article button {
   background: var(--color-black);
   color: var(--color-white);
   border: 2px solid var(--color-black);
@@ -595,12 +533,15 @@ main > section:nth-of-type(5) ul:last-of-type li article button {
   justify-content: center;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-main > section:nth-of-type(5) ul:last-of-type li article button:hover {
+main > section:nth-of-type(5) ul:nth-of-type(2) li article button:hover {
   background: var(--color-gray-800);
   color: var(--color-white);
 }
+
+
 
 /* ===============================
    Boutique
@@ -614,7 +555,6 @@ main > section:nth-of-type(6) {
   overflow: hidden;
   color: var(--color-text-invert);
 }
-
 main > section:nth-of-type(6) video {
   position: absolute;
   inset: 0;
@@ -623,7 +563,6 @@ main > section:nth-of-type(6) video {
   object-fit: cover;
   z-index: 0;
 }
-
 main > section:nth-of-type(6)::before {
   content: "";
   position: absolute;
@@ -631,7 +570,6 @@ main > section:nth-of-type(6)::before {
   background: var(--color-bg-overlay-dark);
   z-index: 1;
 }
-
 main > section:nth-of-type(6) article {
   z-index: 2;
   background: rgba(20,20,20,0.8);
@@ -643,7 +581,6 @@ main > section:nth-of-type(6) article {
   text-align: center;
   box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.4);
 }
-
 main > section:nth-of-type(6) article p:first-of-type {
   background: var(--color-gold);
   color: var(--color-text-invert);
@@ -653,14 +590,11 @@ main > section:nth-of-type(6) article p:first-of-type {
   display: inline-block;
   margin: 0 0 1rem 0;
 }
-
 main > section:nth-of-type(6) article h2 {
   font-size: 1.8rem;
   margin: 0 0 1.5rem 0;
   line-height: 1.4;
 }
-
-/* Groene knop */
 main > section:nth-of-type(6) article button {
   background: var(--color-green);
   color: var(--color-text-invert);
@@ -671,13 +605,10 @@ main > section:nth-of-type(6) article button {
   cursor: pointer;
   transition: background 0.2s;
 }
-
 main > section:nth-of-type(6) article button:hover {
   background: var(--color-green-dark);
 }
-
-/* Ronde pauze/play knop */
-main > section:nth-of-type(6) > button:last-of-type { /* Moet wel voor de groene knop */
+main > section:nth-of-type(6) > button:last-of-type {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -689,13 +620,11 @@ main > section:nth-of-type(6) > button:last-of-type { /* Moet wel voor de groene
   z-index: 2;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 main > section:nth-of-type(6) > button:last-of-type img {
   width: 1rem;
   height: 1rem;
   display: block;
 }
-
 
 
 /* ===============================
@@ -704,18 +633,15 @@ main > section:nth-of-type(6) > button:last-of-type img {
 main > section:nth-of-type(7) {
   padding: 4rem 5%;
 }
-
 main > section:nth-of-type(7) h2 {
   font-size: 2rem;
   margin: 0 0 .4rem;
 }
-
 main > section:nth-of-type(7) p {
   color: var(--color-text-muted);
   margin: 0 0 2.2rem;
   font-size: 1rem;
 }
-
 main > section:nth-of-type(7) ul {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -724,7 +650,6 @@ main > section:nth-of-type(7) ul {
   margin: 2rem 0 0;
   padding: 0;
 }
-
 main > section:nth-of-type(7) ul li {
   position: relative;
   border-radius: 1rem;
@@ -732,7 +657,6 @@ main > section:nth-of-type(7) ul li {
   height: 32rem;
   background: var(--color-white);
 }
-
 main > section:nth-of-type(7) li::before {
   content: "";
   position: absolute;
@@ -740,14 +664,12 @@ main > section:nth-of-type(7) li::before {
   background: linear-gradient(to bottom, var(--color-overlay-gradient), rgba(0,0,0,0) 10rem);
   z-index: 0;
 }
-
 main > section:nth-of-type(7) ul li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
 main > section:nth-of-type(7) ul li:nth-of-type(1) h3,
 main > section:nth-of-type(7) ul li:nth-of-type(1) h4,
 main > section:nth-of-type(7) ul li:nth-of-type(2) h3,
@@ -760,19 +682,16 @@ main > section:nth-of-type(7) ul li:nth-of-type(2) h4 {
   text-align: left;
   text-shadow: 0 1px 6px rgba(0,0,0,.35);
 }
-
 main > section:nth-of-type(7) ul li:nth-of-type(1) h3,
 main > section:nth-of-type(7) ul li:nth-of-type(2) h3 {
   top: 1rem;
   font-size: 0.95rem;
 }
-
 main > section:nth-of-type(7) ul li:nth-of-type(1) h4,
 main > section:nth-of-type(7) ul li:nth-of-type(2) h4 {
   top: 2.4rem;
   font-size: 1.25rem;
 }
-
 main > section:nth-of-type(7) ul li:nth-of-type(1) p,
 main > section:nth-of-type(7) ul li:nth-of-type(2) p {
   position: absolute;
@@ -785,7 +704,6 @@ main > section:nth-of-type(7) ul li:nth-of-type(2) p {
   z-index: 2;
   text-shadow: 0 1px 6px rgba(0,0,0,.35);
 }
-
 main > section:nth-of-type(7) ul li:nth-of-type(3) {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -793,7 +711,6 @@ main > section:nth-of-type(7) ul li:nth-of-type(3) {
   overflow: hidden;
   background: var(--color-white);
 }
-
 main > section:nth-of-type(7) ul li:nth-of-type(3) img {
   grid-row: 1;
   width: 100%;
@@ -801,7 +718,6 @@ main > section:nth-of-type(7) ul li:nth-of-type(3) img {
   object-fit: cover;
   display: block;
 }
-
 main > section:nth-of-type(7) ul li:nth-of-type(3) article {
   grid-row: 2;
   padding: 1rem;
@@ -809,18 +725,17 @@ main > section:nth-of-type(7) ul li:nth-of-type(3) article {
   flex-direction: column;
   justify-content: flex-start;
 }
-
 main > section:nth-of-type(7) ul li:nth-of-type(3) article h3 {
   font-size: .9rem;
   margin: 0 0 .5rem;
   color: var(--color-text-muted);
 }
-
 main > section:nth-of-type(7) ul li:nth-of-type(3) article h4 {
   font-size: 1.1rem;
   margin: 0;
   color: var(--color-black);
 }
+
 
 /* ===============================
    Welkom
@@ -830,17 +745,12 @@ main > section:nth-of-type(8) {
   text-align: center;
   padding: 3rem 1rem;
 }
-
 main > section:nth-of-type(8) p {
   font-size: 1rem;
   color: var(--color-text-body);
   margin-bottom: 1.5rem;
 }
-
-main > section:nth-of-type(8) p span {
-  font-weight: bold;
-}
-
+main > section:nth-of-type(8) p span { font-weight: bold; }
 main > section:nth-of-type(8) button {
   background: var(--color-green-alt);
   color: var(--color-text-invert);
@@ -852,11 +762,7 @@ main > section:nth-of-type(8) button {
   margin-bottom: 1.5rem;
   transition: background 0.3s ease;
 }
-
-main > section:nth-of-type(8) button:hover {
-  background: var(--color-green-alt-dark);
-}
-
+main > section:nth-of-type(8) button:hover { background: var(--color-green-alt-dark); }
 main > section:nth-of-type(8) a {
   display: block;
   margin: 0;
@@ -874,12 +780,10 @@ main > section:nth-of-type(9) {
   text-align: center;
   padding: 3rem 1rem;
 }
-
 main > section:nth-of-type(9) h2 {
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
-
 main > section:nth-of-type(9) ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -889,41 +793,34 @@ main > section:nth-of-type(9) ul {
   padding: 0;
   list-style: none;
 }
-
 main > section:nth-of-type(9) ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
 main > section:nth-of-type(9) ul li img {
   width: 3.5rem;
   margin-bottom: 1rem;
 }
-
 main > section:nth-of-type(9) ul li h3 {
   font-size: 1rem;
   margin-bottom: 0.75rem;
   color: var(--color-black);
 }
-
 main > section:nth-of-type(9) ul li p {
   font-size: 0.9rem;
   color: var(--color-text-muted);
   line-height: 1.4;
   margin: 0 0 1rem;
 }
-
 main > section:nth-of-type(9) ul li a {
   font-size: 0.9rem;
   color: var(--color-brown);
   text-decoration: none;
 }
+main > section:nth-of-type(9) ul li a:hover { text-decoration: underline; }
 
-main > section:nth-of-type(9) ul li a:hover {
-  text-decoration: underline;
-}
 
 /* ===============================
    Experience
@@ -937,14 +834,12 @@ main > section:nth-of-type(10) {
   margin: 5rem auto;
   padding: 4rem 1rem;
 }
-
 main > section:nth-of-type(10) div {
   position: relative;
   z-index: 0;
   width: 100%;
   isolation: isolate;
 }
-
 main > section:nth-of-type(10) div::before {
   content: "";
   position: absolute;
@@ -956,30 +851,27 @@ main > section:nth-of-type(10) div::before {
   top: -3.5rem;
   box-shadow: 0 0.06rem 0.2rem rgba(0,0,0,.04);
 }
-
 main > section:nth-of-type(10) div img {
   display: block;
   width: 35rem;
   height: 27.5rem;
 }
-
 main > section:nth-of-type(10) article {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 main > section:nth-of-type(10) article p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-text-main);
 }
-
 main > section:nth-of-type(10) article a {
   color: var(--color-brown);
   text-decoration: underline;
 }
+
 
 /* ===============================
    Te bieden
@@ -994,7 +886,6 @@ main > section:nth-of-type(11) {
   color: var(--color-text-invert);
   overflow: hidden;
 }
-
 main > section:nth-of-type(11) img {
   position: absolute;
   inset: 0;
@@ -1003,7 +894,6 @@ main > section:nth-of-type(11) img {
   object-fit: cover;
   z-index: -2;
 }
-
 main > section:nth-of-type(11)::before {
   content: "";
   position: absolute;
@@ -1011,20 +901,17 @@ main > section:nth-of-type(11)::before {
   background: rgba(0, 0, 0, 0.35);
   z-index: -1;
 }
-
 main > section:nth-of-type(11) h2 {
   margin: 0 0 1rem;
   font-size: 1.8rem;
   max-width: 56rem;
 }
-
 main > section:nth-of-type(11) p {
   margin: 0 0 2rem;
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 53rem;
 }
-
 main > section:nth-of-type(11) a {
   display: inline-block;
   padding: 0.6rem 1.4rem;
@@ -1034,81 +921,47 @@ main > section:nth-of-type(11) a {
   text-decoration: none;
   transition: background 0.3s ease;
 }
+main > section:nth-of-type(11) a:hover { background: var(--color-text-muted); }
 
-main > section:nth-of-type(11) a:hover {
-  background: var(--color-text-muted);
-}
 
 /* ===============================
-   Responsive: Mobiel
+   Responsive (≤ 768px)
 ================================ */
 @media (max-width: 768px) {
-  /* Hero */
+  /* -------- Responsive – Hero -------- */
   main > section:first-of-type {
     height: 70vh;
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
   }
+  main > section:first-of-type article { margin-left: 0; max-width: 100%; }
+  main > section:first-of-type h1 { font-size: 1.8rem; }
+  main > section:first-of-type p { font-size: 1rem; }
 
-  main > section:first-of-type article {
-    margin-left: 0;
-    max-width: 100%;
-  }
+  /* -------- Responsive – Producten -------- */
+  main > section:nth-of-type(2) ul { grid-template-columns: 1fr; gap: 1rem; }
+  main > section:nth-of-type(2) li button { font-size: 0.85rem; padding: 0.5rem 1rem; }
 
-  main > section:first-of-type h1 {
-    font-size: 1.8rem;
-  }
-
-  main > section:first-of-type p {
-    font-size: 1rem;
-  }
-
-  /* Producten */
-  main > section:nth-of-type(2) ul {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  main > section:nth-of-type(2) li button {
-    font-size: 0.85rem;
-    padding: 0.5rem 1rem;
-  }
-
-  /* Promoties */
+  /* -------- Responsive – Promoties -------- */
   main > section:nth-of-type(3) h2,
-  main > section:nth-of-type(3) p {
-    margin-left: 0;
-    text-align: center;
-  }
+  main > section:nth-of-type(3) p { margin-left: 0; text-align: center; }
+  main > section:nth-of-type(3) ul { margin-left: 0; gap: 1rem; }
 
-  main > section:nth-of-type(3) ul {
-    margin-left: 0;
-    gap: 1rem;
-  }
-
-  /* Samra Collectie */
- main > section:nth-of-type(4) h3 {
-    margin-left: 0;
-    text-align: left;
-    font-size: 3rem;
-  }
-
-  /* Grid fix */
+  /* -------- Responsive – Samra Collectie -------- */
+  main > section:nth-of-type(4) h3 { margin-left: 0; text-align: left; font-size: 3rem; }
   main > section:nth-of-type(4) ul {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 0.75rem;
   }
-
   main > section:nth-of-type(4) li:first-child {
     grid-column: 1 / -1;
     grid-row: 1;
     width: 100%;
     height: auto;
   }
-
   main > section:nth-of-type(4) li:nth-of-type(2),
   main > section:nth-of-type(4) li:nth-of-type(3) {
     grid-row: 2;
@@ -1116,7 +969,6 @@ main > section:nth-of-type(11) a:hover {
     height: auto;
     aspect-ratio: 1 / 1;
   }
-
   main > section:nth-of-type(4) img {
     width: 100%;
     height: 100%;
@@ -1125,18 +977,9 @@ main > section:nth-of-type(11) a:hover {
     display: block;
   }
 
-  /* Bestsellers */
-  main > section:nth-of-type(5) {
-    position: relative;
-  }
-
-  /* Titel */
-  main > section:nth-of-type(5) h2 {
-    font-size: 2rem;
-    margin: 1rem 1rem 1.5rem;
-  }
-
-  /* Pills blijven scrollbaar */
+  /* -------- Responsive – Bestsellers -------- */
+  main > section:nth-of-type(5) { position: relative; }
+  main > section:nth-of-type(5) h2 { font-size: 2rem; margin: 1rem 1rem 1.5rem; }
   main > section:nth-of-type(5) ul:first-of-type {
     margin: 0 1rem 1rem;
     display: flex;
@@ -1144,12 +987,7 @@ main > section:nth-of-type(11) a:hover {
     overflow-x: scroll;
     scrollbar-width: none;
   }
-
-  main > section:nth-of-type(5) ul:first-of-type li {
-    flex: 0 0 auto;
-  }
-
-  /* Productlijst wordt een horizontale scroll */
+  main > section:nth-of-type(5) ul:first-of-type li { flex: 0 0 auto; }
   main > section:nth-of-type(5) ul:last-of-type {
     display: flex;
     gap: 1rem;
@@ -1158,44 +996,17 @@ main > section:nth-of-type(11) a:hover {
     margin: 0 1rem 1rem;
     padding: 0;
   }
+  main > section:nth-of-type(5) ul:last-of-type li { flex: 0 0 80%; max-width: 18.75rem; }
+  main > section:nth-of-type(5) ul:last-of-type li img { width: 100%; height: auto; object-fit: contain; }
+  main > section:nth-of-type(5) button:nth-of-type(1),
+  main > section:nth-of-type(5) button:nth-of-type(2) { display: none; }
 
-  main > section:nth-of-type(5) ul:last-of-type li {
-    flex: 0 0 80%; /* kaart neemt ~80% van de breedte */
-    max-width: 18.75rem;
-  }
+  /* -------- Responsive – Boutique -------- */
+  main > section:nth-of-type(6) article { width: 90%; height: auto; padding: 1.5rem; }
 
-  /* Afbeelding netjes */
-  main > section:nth-of-type(5) ul:last-of-type li img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  /* Buttons verbergen */
-  main > section:nth-of-type(5) > button:nth-of-type(1),
-  main > section:nth-of-type(5) > button:nth-of-type(2) {
-    display: none;
-  }
-
-  /* Boutique */
-  main > section:nth-of-type(6) article {
-    width: 90%;
-    height: auto;
-    padding: 1.5rem;
-  }
-
-  /* Commitment */
-main > section:nth-of-type(7) h2 {
-    font-size: 1.6rem;
-    margin: 0 1rem 0.5rem;
-  }
-
-  main > section:nth-of-type(7) > p {
-    font-size: 0.9rem;
-    margin: 0 1rem 1.5rem;
-  }
-
-  /* Kaartenlijst horizontaal scrollbaar */
+  /* -------- Responsive – Commitment -------- */
+  main > section:nth-of-type(7) h2 { font-size: 1.6rem; margin: 0 1rem 0.5rem; }
+  main > section:nth-of-type(7) p { font-size: 0.9rem; margin: 0 1rem 1.5rem; }
   main > section:nth-of-type(7) ul {
     display: flex;
     gap: 1rem;
@@ -1205,19 +1016,11 @@ main > section:nth-of-type(7) h2 {
     margin: 0 1rem;
     padding: 0;
   }
+  main > section:nth-of-type(7) ul::-webkit-scrollbar { display: none; }
+  main > section:nth-of-type(7) ul li { flex: 0 0 80%; height: auto; }
 
-  main > section:nth-of-type(7) ul::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Kaarten naast elkaar schuiven */
-  main > section:nth-of-type(7) ul li {
-    flex: 0 0 80%; /* neemt bijna heel scherm in */
-    height: auto;
-  }
-
-  /* Help cards */
- main > section:nth-of-type(9) ul {
+  /* -------- Responsive – Help cards -------- */
+  main > section:nth-of-type(9) ul {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
@@ -1225,52 +1028,33 @@ main > section:nth-of-type(7) h2 {
     scrollbar-width: none;
     padding: 0 1rem;
   }
-
-  main > section:nth-of-type(9) ul::-webkit-scrollbar {
-    display: none;
-  }
-
+  main > section:nth-of-type(9) ul::-webkit-scrollbar { display: none; }
   main > section:nth-of-type(9) ul li {
-    flex: 0 0 80%; /* kaart neemt 80% van scherm */
-    max-width: 20rem; /* optioneel, voorkomt te breed */
-    
+    flex: 0 0 80%;
+    max-width: 20rem;
     border-radius: 0.75rem;
     padding: 1.5rem 1rem;
   }
 
-  /* Experience */
+  /* -------- Responsive – Experience -------- */
   main > section:nth-of-type(10) {
     grid-template-columns: 1fr;
     gap: 2rem;
     margin: 2rem auto;
   }
+  main > section:nth-of-type(10) div img { width: 100%; height: auto; }
 
-  main > section:nth-of-type(10) div img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Te bieden */
-  main > section:nth-of-type(11) h2 {
-    font-size: 1.4rem;
-  }
-
-  main > section:nth-of-type(11) p {
-    font-size: 1rem;
-  }
+  /* -------- Responsive – Te bieden -------- */
+  main > section:nth-of-type(11) h2 { font-size: 1.4rem; }
+  main > section:nth-of-type(11) p  { font-size: 1rem; }
 }
 
+
+/* ===============================
+   Responsive (≤ 480px)
+================================ */
 @media (max-width: 480px) {
-  main > section:first-of-type h1 {
-    font-size: 1.5rem;
-  }
-
-  main > section:first-of-type p {
-    font-size: 0.9rem;
-  }
-
-  main > section:nth-of-type(3) h3 {
-    font-size: 1.2rem;
-  }
+  main > section:first-of-type h1 { font-size: 1.5rem; }
+  main > section:first-of-type p  { font-size: 0.9rem; }
+  main > section:nth-of-type(3) h3 { font-size: 1.2rem; }
 }
-

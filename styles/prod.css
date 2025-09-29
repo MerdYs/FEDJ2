@@ -19,7 +19,7 @@ main > section:first-of-type > a:hover {
 /************************************/
 main > section:nth-of-type(2) {
   width: 100%;
-  background: var(--color-bg-light) url(/images/light_texture_machine_nespresso_0.png);
+  background: var(--color-bg-light) url(./images/light_texture_machine_nespresso_0.png);
   background-size: cover;
   background-position: center;
 
@@ -230,46 +230,61 @@ main > section section:nth-of-type(2) aside button {
 }
 
 /* Kleuren */
-/* basis styling van de lijst */
-main > section section:nth-of-type(2) aside ul:nth-of-type(1) {
-  grid-row: 6;
-  grid-column: 1 / span 2;
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 2rem;
+main > section:nth-of-type(2) section:nth-of-type(2) aside ul {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-/* list items zelf */
-main > section section:nth-of-type(2) aside ul:nth-of-type(1) li {
-  list-style: none;
+/* Kleuren: dit is de eerste UL in het aside -> plaats 'm terug op rij 6 */
+main > section:nth-of-type(2) section:nth-of-type(2) aside ul:first-of-type {
+  grid-row: 6;
+  grid-column: 1 / -1;        /* over beide kolommen */
+  display: flex;
+  align-items: center;
+  gap: .6rem;
 }
 
-/* de buttons (kleurronde cirkels) */
-main > section section:nth-of-type(2) aside ul:nth-of-type(1) li button {
+/* Basis swatch-knop */
+main > section:nth-of-type(2) section:nth-of-type(2) aside ul:first-of-type li button {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  border: 1px solid var(--color-green);
+  border: 1px solid var(--color-gray-400);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
   padding: 0;
   outline: none;
-  transition: border 0.2s ease;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
 }
 
-/* border bij hover */
-main > section section:nth-of-type(2) aside ul:nth-of-type(1) li button:hover {
-  border: 2px solid var(--color-gray-600);
-  transform: scaleX(1.5);
+/* Interactie */
+main > section:nth-of-type(2) section:nth-of-type(2) aside ul:first-of-type li button:hover {
+  transform: scale(1.08);
+  border-color: var(--color-gray-600);
+}
+main > section:nth-of-type(2) section:nth-of-type(2) aside ul:first-of-type li button:focus {
+  border: 3px solid var(--color-gold);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-gold) 25%, transparent);
 }
 
-/* border bij focus (wanneer je er op klikt) */
-main > section section:nth-of-type(2) aside ul:nth-of-type(1) li button:focus {
-  border: 5px solid var(--color-gold);
+/* Kleur-afbeeldingen per positie (geen classes nodig) */
+main > section:nth-of-type(2) section:nth-of-type(2) aside ul:first-of-type li:nth-child(1) button {
+  background-image: url("./images/color_black_0.png.webp");
 }
+main > section:nth-of-type(2) section:nth-of-type(2) aside ul:first-of-type li:nth-child(2) button {
+  background-image: url("./images/color_silver_0.png.webp");
+}
+main > section:nth-of-type(2) section:nth-of-type(2) aside ul:first-of-type li:nth-child(3) button {
+  background-image: url("./images/color_red_0.png.webp");
+}
+main > section:nth-of-type(2) section:nth-of-type(2) aside ul:first-of-type li:nth-child(4) button {
+  background-image: url("./images/color_white.png.webp");
+  border-color: var(--color-green); 
+}
+
 
 
 /* Features */
