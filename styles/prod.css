@@ -679,7 +679,6 @@ main > section:nth-of-type(8) ul li {
 }
 
 main > section:nth-of-type(8) ul li:hover {
-  transform: translateY(-5px);
   box-shadow: 0 6px 25px rgba(0,0,0,0.15);
 }
 
@@ -777,12 +776,14 @@ main > section:nth-of-type(9) h2 {
   text-transform: uppercase;
 }
 
+/* FAQ blokken */
 main > section:nth-of-type(9) details {
   border-bottom: 1px solid var(--color-border);
   text-align: left;
   padding: 1rem 0;
-  width: 50rem;
-  justify-self: center;
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 main > section:nth-of-type(9) summary {
@@ -855,10 +856,13 @@ main > section:nth-of-type(10) li {
   width: 37.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* verdeelt inhoud */
+  align-items: center;            /* alles gecentreerd */
 }
 
 main > section:nth-of-type(10) li:hover {
-  transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
@@ -867,6 +871,10 @@ main > section:nth-of-type(10) img {
   object-fit: contain;
   margin-bottom: 1rem;
   justify-self: center;
+  max-height: 7.5rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 main > section:nth-of-type(10) h3 {
@@ -1209,44 +1217,24 @@ main > section:nth-of-type(10) button:hover {
 
   main > section:nth-of-type(8) ul {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    gap: 0;               /* ❌ geen gap hier */
+    flex-direction: column; /* 👉 kaarten onder elkaar */
+    gap: 1.5rem;
     margin: 0;
-    padding: 0;
+    padding: 0 1rem;
     list-style: none;
-    scrollbar-width: none;
-  }
-
-  main > section:nth-of-type(8) ul::-webkit-scrollbar {
-    display: none;
   }
 
   main > section:nth-of-type(8) ul li {
-    flex: 0 0 75%;        /* ✅ smaller zodat er ruimte is om volledig te swipen */
-    scroll-snap-align: center;
-    background: var(--color-white);
+    width: 100%;          /* volle breedte */
+    max-width: 100%;      /* niet breder dan het scherm */
+    margin: 0 auto;       /* centreren */
     border-radius: .5rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,.1);
     padding: 1.5rem 1rem;
-    margin: 0;            /* ❌ standaard geen marge */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  /* eerste kaart met marge links */
-  main > section:nth-of-type(8) ul li:first-child {
-    margin-left: 1rem;
-  }
-
-  /* laatste kaart met marge rechts */
-  main > section:nth-of-type(8) ul li:last-child {
-    margin-right: 1rem;
   }
 
   main > section:nth-of-type(9) {
@@ -1255,59 +1243,38 @@ main > section:nth-of-type(10) button:hover {
 
   main > section:nth-of-type(9) h2 {
     font-size: 1.4rem;
-    text-align: center;
     margin-bottom: 1.5rem;
   }
 
-  main > section:nth-of-type(9) ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem; /* ruimte tussen de vragen */
-  }
-
-  main > section:nth-of-type(9) ul li {
-    width: 100%;
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: 0.4rem;
-    padding: 1rem;
-    font-size: 0.95rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  main > section:nth-of-type(9) ul li:hover {
-    background: var(--color-bg-alt);
-  }
-
-  main > section:nth-of-type(9) ul li span {
-    flex: 1;
-  }
-
-  main > section:nth-of-type(9) ul li svg,
-  main > section:nth-of-type(9) ul li i {
-    flex-shrink: 0;
-  }
-
-  main > section:nth-of-type(9) {
-    padding: 2rem 1rem;
-  }
-
-  main > section:nth-of-type(9) h2 {
-    font-size: 1.3rem;
+  main > section:nth-of-type(9) details {
+    padding: 0.75rem 0;
   }
 
   main > section:nth-of-type(9) summary {
     font-size: 0.95rem;
   }
 
-  main > section:nth-of-type(9) p,
-  main > section:nth-of-type(9) ol {
+  main > section:nth-of-type(9) details p,
+  main > section:nth-of-type(9) details ol {
     font-size: 0.9rem;
+  }
+
+    main > section:nth-of-type(10) ul {
+    display: flex;
+    flex-direction: column; /* 👉 onder elkaar */
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0 1rem;
+    list-style: none;
+  }
+
+  main > section:nth-of-type(10) ul li {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: .5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,.1);
+    padding: 1.5rem 1rem;
+    text-align: center;
   }
 }
