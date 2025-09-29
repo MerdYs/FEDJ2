@@ -208,19 +208,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/Schermafbeelding 2025-09-29 130220.png" width="375px" alt="uitomst opdracht 1">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Het responsive maken ging best goed, hoewel ik soms wel een beetje tegenslag had heb ik alles zo goed mogelijk proberen na te maken.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/Schermafbeelding 2025-09-29 130422.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Er zijn verschillende elementen niet gelukt. Wegens tijdsgebrek heb ik het zo gelaten. Waaronder het maken van de samra divs.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/Schermafbeelding 2025-09-29 130609.png" width="375px" alt="bummer">
 </details>
 
 
@@ -239,6 +238,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   1. [bron 1](https://stackoverflow.com/questions/56758098/how-to-position-detail-marker-to-come-after-summary)
   2. [bron 2](https://chatgpt.com/) ChatGpT als laatste hulpmiddel! of om pixels te veranderen naar rem etc.
   3. [bron 3](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
-  4. [bron 4]()
+  4. [bron 4](https://codepen.io/shooft/pen/QwjQGZe) carousel
+  5. [bron 5](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-last-of-type) beetje :nth in het algemeen
+  6. [bron 6](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details)
 
 </details>

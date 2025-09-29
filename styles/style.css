@@ -319,7 +319,6 @@ header nav:first-of-type > button p {
   margin: 0;
 }
 
-/* Hamburger → X */
 #hamburger-btn.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -607,9 +606,9 @@ footer > section:nth-of-type(4) article:nth-of-type(3) p {
    Responsive gedrag
 ================================ */
 @media (max-width: 960px) {
-  header nav:nth-of-type(2) { display: none; } /* desktop menu weg */
+  header nav:nth-of-type(2) { display: none; }
   header nav:first-of-type button { display: flex; }
-  header nav:first-of-type ul li p { display: none; } /* icon labels weg */
+  header nav:first-of-type ul li p { display: none; }
   header nav:first-of-type ul li {
     border: none;
     padding: 0;
@@ -617,15 +616,14 @@ footer > section:nth-of-type(4) article:nth-of-type(3) p {
     background: none;
   }
   header nav:first-of-type ul li.account .status-indicator {
-    top: -0.3rem;   /* omhoog */
-    left: auto;     /* reset left */
-    right: -0.3rem; /* naar rechtsboven */
+    top: -0.3rem;
+    left: auto;
+    right: -0.3rem;
   }
 footer > section:first-of-type {
     display: block !important;
   }
 
-  /* Sectie 2: App + Waarborg onder elkaar */
   footer > section:nth-of-type(2) {
     flex-direction: column;
     align-items: flex-start;
@@ -642,7 +640,6 @@ footer > section:first-of-type {
     height: 2rem;
   }
 
-  /* Sectie 3: Taal + Legal onder elkaar */
   footer > section:nth-of-type(3) {
     flex-direction: column;
     align-items: flex-start;
@@ -665,7 +662,6 @@ footer > section:first-of-type {
     justify-self: start;
   }
 
-  /* Sectie 4: alles onder elkaar */
   footer > section:nth-of-type(4) {
     display: flex;
     flex-direction: column;
