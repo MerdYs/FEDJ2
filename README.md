@@ -236,8 +236,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. [bron 1](https://stackoverflow.com/questions/56758098/how-to-position-detail-marker-to-come-after-summary)
+  2. [bron 2](https://chatgpt.com/) ChatGpT als laatste hulpmiddel! of om pixels te veranderen naar rem etc.
+  3. [bron 3](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
+  4. [bron 4]()
 
 </details>
